@@ -2,7 +2,7 @@
   "viewBox": "0 0 1000 850",
   "width": 1000,
   "height": 850,
-  "total": 141,
+  "total": 142,
   "municipios": [
     {
       "id": "5100102",
@@ -23,7 +23,14 @@
         632.8
       ],
       "populacao": 5014,
-      "populacao_formatada": "5.014 hab."
+      "populacao_formatada": "5.014 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -15.1774,
+      "lon": -56.318
     },
     {
       "id": "5100201",
@@ -44,7 +51,14 @@
         565.9
       ],
       "populacao": 29219,
-      "populacao_formatada": "29.219 hab."
+      "populacao_formatada": "29.219 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Médio Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Água Boa",
+      "sede_ers": "Água Boa",
+      "lat": -13.9776,
+      "lon": -52.5001
     },
     {
       "id": "5100250",
@@ -65,7 +79,14 @@
         272.5
       ],
       "populacao": 58613,
-      "populacao_formatada": "58.613 hab."
+      "populacao_formatada": "58.613 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Alto Tapajós",
+      "polo_macro": "Sinop",
+      "polo_micro": "Alta Floresta",
+      "sede_ers": "Alta Floresta",
+      "lat": -10.0557,
+      "lon": -56.3677
     },
     {
       "id": "5100300",
@@ -86,7 +107,14 @@
         836.4
       ],
       "populacao": 17193,
-      "populacao_formatada": "17.193 hab."
+      "populacao_formatada": "17.193 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -17.4498,
+      "lon": -53.467
     },
     {
       "id": "5100359",
@@ -107,7 +135,14 @@
         372.3
       ],
       "populacao": 5715,
-      "populacao_formatada": "5.715 hab."
+      "populacao_formatada": "5.715 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Norte Araguaia Karajá",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "São Félix do Araguaia",
+      "sede_ers": "São Félix do Araguaia",
+      "lat": -11.8115,
+      "lon": -51.7503
     },
     {
       "id": "5100409",
@@ -128,7 +163,14 @@
         774.8
       ],
       "populacao": 13052,
-      "populacao_formatada": "13.052 hab."
+      "populacao_formatada": "13.052 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -16.8883,
+      "lon": -53.5809
     },
     {
       "id": "5100508",
@@ -149,7 +191,14 @@
         612.2
       ],
       "populacao": 8009,
-      "populacao_formatada": "8.009 hab."
+      "populacao_formatada": "8.009 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Centro Norte",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Diamantino",
+      "sede_ers": "Diamantino",
+      "lat": -14.7599,
+      "lon": -56.6612
     },
     {
       "id": "5100607",
@@ -170,7 +219,14 @@
         836.4
       ],
       "populacao": 10904,
-      "populacao_formatada": "10.904 hab."
+      "populacao_formatada": "10.904 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -17.8273,
+      "lon": -53.2962
     },
     {
       "id": "5100805",
@@ -191,7 +247,14 @@
         207.6
       ],
       "populacao": 8590,
-      "populacao_formatada": "8.590 hab."
+      "populacao_formatada": "8.590 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Alto Tapajós",
+      "polo_macro": "Sinop",
+      "polo_micro": "Alta Floresta",
+      "sede_ers": "Alta Floresta",
+      "lat": -8.7587,
+      "lon": -57.8261
     },
     {
       "id": "5101001",
@@ -212,7 +275,14 @@
         666.4
       ],
       "populacao": 3795,
-      "populacao_formatada": "3.795 hab."
+      "populacao_formatada": "3.795 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -15.1302,
+      "lon": -51.8067
     },
     {
       "id": "5101209",
@@ -233,7 +303,14 @@
         745.3
       ],
       "populacao": 1010,
-      "populacao_formatada": "1.010 hab."
+      "populacao_formatada": "1.010 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -16.7508,
+      "lon": -53.121
     },
     {
       "id": "5101258",
@@ -254,7 +331,14 @@
         641.5
       ],
       "populacao": 14786,
-      "populacao_formatada": "14.786 hab."
+      "populacao_formatada": "14.786 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.253,
+      "lon": -58.4591
     },
     {
       "id": "5101308",
@@ -275,7 +359,14 @@
         574.2
       ],
       "populacao": 10576,
-      "populacao_formatada": "10.576 hab."
+      "populacao_formatada": "10.576 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -14.5071,
+      "lon": -56.8594
     },
     {
       "id": "5101407",
@@ -296,7 +387,14 @@
         290.4
       ],
       "populacao": 24626,
-      "populacao_formatada": "24.626 hab."
+      "populacao_formatada": "24.626 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Noroeste Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Juína",
+      "sede_ers": "Juína",
+      "lat": -10.1797,
+      "lon": -59.8564
     },
     {
       "id": "5101605",
@@ -317,7 +415,14 @@
         783.9
       ],
       "populacao": 7253,
-      "populacao_formatada": "7.253 hab."
+      "populacao_formatada": "7.253 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -16.8106,
+      "lon": -56.0295
     },
     {
       "id": "5101704",
@@ -338,7 +443,14 @@
         650.9
       ],
       "populacao": 29403,
-      "populacao_formatada": "29.403 hab."
+      "populacao_formatada": "29.403 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -15.0927,
+      "lon": -57.4258
     },
     {
       "id": "5101803",
@@ -359,7 +471,42 @@
         671.3
       ],
       "populacao": 69210,
-      "populacao_formatada": "69.210 hab."
+      "populacao_formatada": "69.210 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -15.3632,
+      "lon": -52.4428
+    },
+    {
+      "id": "5101837",
+      "codarea": "5101837",
+      "nome": "Boa Esperança do Norte",
+      "regiao": "Teles Pires",
+      "status": "INTEGRADO",
+      "status_label": "Adesão Homologada SES-MT",
+      "d": "M538.9,480L539.7,480.2L539.8,481L539.7,481.9L539.7,482.7L539.7,483.5L540.5,483.9L540.2,484.8L539.7,485.5L540.2,486.3L541.1,486.3L541.8,485.9L542.4,485.3L543.2,484.9L543.1,485.7L543.5,486.5L543.4,487.3L543.6,488.1L543.7,488.9L543.7,489.7L544.1,490.4L544.5,491.1L545.3,491.2L546.3,491.5L547.1,491.7L547.2,492.5L547.6,493.3L548.4,493.2L548.8,492.4L549.6,492.8L549.1,493.5L549.5,494.2L550.1,494.8L550.8,494.2L551.5,494.6L552.2,494L553.1,494.1L553.7,494.7L554.5,494.8L555.1,495.4L555.9,495.6L556.1,496.4L556.6,497.2L557.4,497.3L557.9,498L558.7,497.7L559.4,498.1L559.9,498.9L560.5,498.2L561.7,498.1L562.5,498.6L562.7,499.4L562.7,500.3L562.2,501L561.5,501.4L561.8,502.2L562.6,502.7L562.5,503.5L563.1,504.2L563.8,504.8L565,505.1L565.4,505.8L565.1,506.8L565.4,507.6L566.2,507.7L566.9,508.1L567.2,508.9L567.6,509.6L568.3,510.2L568.4,509.4L568.8,508.7L569.6,508.8L570.4,509.1L571.2,509.3L572,509.7L573,509.7L573.9,509.4L574.6,509L575.4,509.1L576.1,508.7L576.9,508.4L577.8,508.5L578.6,508.2L579,507.3L580.3,508.5L582.1,510.3L583.7,511.7L585.3,513.3L586.6,514.5L588.1,513.5L591.4,510.8L592.3,510.8L593.2,510.5L594,510.1L594.7,509.5L595.2,508.8L595.3,508L594.9,507.3L594.4,506.6L594.4,505.8L594,505.1L593.7,504.3L593.4,503.5L593.7,502.7L593.8,501.9L593.9,501.1L593.5,500.4L593.6,499.6L593.7,498.8L593.4,498L593.3,497.2L592.8,496.5L592.9,495.7L593.3,495L593.8,494.3L593.6,493.5L594.1,492.8L594.7,492.1L594.6,491.3L594.6,490.5L594,489.9L593.6,489.2L593.7,488.4L593.3,487.7L593.7,487L594.3,486.4L595,486L595.1,485.2L594.9,484.4L594.8,483.6L594.8,482.8L595.4,482.2L595.6,481.4L596,480.7L596.5,480L596.5,479.2L597.1,478.5L597.9,478.2L598.3,477.5L599,477.1L599.3,476.3L599.7,475.6L600.1,474.9L600.8,474.5L601.5,474.1L602,473.4L602.1,472.6L602.5,471.9L602.7,471.1L602.7,470.3L602.8,469.5L603.1,468.7L603.8,468.1L604.5,467.7L605.2,467.3L605.9,466.9L606.7,466.7L607.5,466.4L608.1,465.8L608.5,465.1L608.4,464.3L608.9,463.6L608.8,462.8L608.5,461.9L609.2,461.3L609.3,460.4L609.6,459.6L610,458.9L610.4,458.1L610.7,457.3L611.4,456.8L611.2,456L610.4,456L609.6,456.6L608.9,457L608.3,457.6L607.6,458.1L607,458.7L606.4,459.4L605.8,460L605,460.5L604.3,460.9L603.5,461.4L602.7,461.7L601.9,461.7L601.2,461.2L596.9,463.5L597.2,462.7L597.2,461.9L596.8,461.2L596.5,460.4L595.9,459.8L595.1,459.3L594.7,458.6L593.8,457.8L593.2,458.5L592.8,459.2L592.7,460L592.5,460.8L592.1,461.5L592.3,462.3L592.2,463.1L591.8,463.8L591.2,464.5L590.8,465.2L590,465.3L589.3,465.7L588.6,466.1L588.2,466.8L587.4,466.7L586.6,466.5L585.8,466.2L585,465.6L584.1,465.6L583.4,465.2L582.6,465L581.8,465L581,465.3L580.7,464.5L580.1,463.8L579.4,463.3L579,464L578.4,464.6L577.7,465L577.3,465.7L571.6,465.3L570.8,465.2L569.9,465.2L569.1,465L568.2,464.6L568.1,463.8L567.7,463.1L567.9,462.1L567.7,461.2L567.3,460.5L566.5,460.8L565.9,461.4L565.4,462.1L565,462.9L564.8,463.7L564.3,464.5L564,465.3L563.7,466.2L563.3,466.9L562.7,467.6L561.9,467.9L561.7,468.8L561.7,469.7L562.1,470.6L562.4,471.5L552.6,467.2L547.9,467.3L547.9,466.4L548,465.6L547.5,464.9L546.8,464.4L545.9,464.1L545.1,463.9L545,463L545.1,462.1L545.4,461.3L545.9,460.6L546.7,460.3L546.9,459.5L547.1,458.7L547.1,457.9L546.7,457.2L546,456.7L545.3,456.2L544.7,455.6L544.1,455L543.4,455.4L543.1,456.2L543,457.2L542.7,458L542.4,458.8L542.2,459.6L542.4,460.4L542.7,461.3L542.8,462.1L542.4,462.9L542.1,463.7L542,464.6L542.1,465.4L542.2,466.2L542.2,467L542.3,467.8L541.4,472.6L540.8,475.3L541.4,476L541.4,476.8L540.7,477.2L540.1,477.8L540.1,478.6L539.4,479.2L539,480Z",
+      "center": [
+        575.1,
+        484.8
+      ],
+      "bounds": [
+        538.9,
+        455,
+        611.4,
+        514.5
+      ],
+      "populacao": 5772,
+      "populacao_formatada": "5.772 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -12.9772,
+      "lon": -55.1561
     },
     {
       "id": "5101852",
@@ -380,7 +527,14 @@
         413.8
       ],
       "populacao": 7280,
-      "populacao_formatada": "7.280 hab."
+      "populacao_formatada": "7.280 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Médio Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Água Boa",
+      "sede_ers": "Água Boa",
+      "lat": -12.2177,
+      "lon": -51.7396
     },
     {
       "id": "5101902",
@@ -401,7 +555,14 @@
         468.7
       ],
       "populacao": 17004,
-      "populacao_formatada": "17.004 hab."
+      "populacao_formatada": "17.004 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Noroeste Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Juína",
+      "sede_ers": "Juína",
+      "lat": -12.4232,
+      "lon": -57.9988
     },
     {
       "id": "5102504",
@@ -422,7 +583,14 @@
         804.1
       ],
       "populacao": 89681,
-      "populacao_formatada": "89.681 hab."
+      "populacao_formatada": "89.681 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -16.5375,
+      "lon": -57.8336
     },
     {
       "id": "5102603",
@@ -443,7 +611,14 @@
         591.8
       ],
       "populacao": 15347,
-      "populacao_formatada": "15.347 hab."
+      "populacao_formatada": "15.347 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -14.3745,
+      "lon": -53.1283
     },
     {
       "id": "5102637",
@@ -464,7 +639,14 @@
         554
       ],
       "populacao": 45899,
-      "populacao_formatada": "45.899 hab."
+      "populacao_formatada": "45.899 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -13.6881,
+      "lon": -57.9308
     },
     {
       "id": "5102678",
@@ -485,7 +667,14 @@
         670.2
       ],
       "populacao": 44585,
-      "populacao_formatada": "44.585 hab."
+      "populacao_formatada": "44.585 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -15.3448,
+      "lon": -54.9581
     },
     {
       "id": "5102686",
@@ -506,7 +695,14 @@
         563.5
       ],
       "populacao": 8822,
-      "populacao_formatada": "8.822 hab."
+      "populacao_formatada": "8.822 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -13.5798,
+      "lon": -59.1931
     },
     {
       "id": "5102694",
@@ -527,7 +723,14 @@
         336.3
       ],
       "populacao": 4485,
-      "populacao_formatada": "4.485 hab."
+      "populacao_formatada": "4.485 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Araguaia Xingu",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Porto Alegre do Norte",
+      "sede_ers": "Porto Alegre do Norte",
+      "lat": -11.2016,
+      "lon": -51.8235
     },
     {
       "id": "5102702",
@@ -548,7 +751,14 @@
         507.5
       ],
       "populacao": 25858,
-      "populacao_formatada": "25.858 hab."
+      "populacao_formatada": "25.858 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Médio Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Água Boa",
+      "sede_ers": "Água Boa",
+      "lat": -13.3298,
+      "lon": -52.3989
     },
     {
       "id": "5102793",
@@ -569,7 +779,14 @@
         250.9
       ],
       "populacao": 10332,
-      "populacao_formatada": "10.332 hab."
+      "populacao_formatada": "10.332 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Alto Tapajós",
+      "polo_macro": "Sinop",
+      "polo_micro": "Alta Floresta",
+      "sede_ers": "Alta Floresta",
+      "lat": -10.1063,
+      "lon": -55.8341
     },
     {
       "id": "5102850",
@@ -590,7 +807,14 @@
         319.3
       ],
       "populacao": 7506,
-      "populacao_formatada": "7.506 hab."
+      "populacao_formatada": "7.506 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Noroeste Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Juína",
+      "sede_ers": "Juína",
+      "lat": -10.9405,
+      "lon": -58.6028
     },
     {
       "id": "5103007",
@@ -611,7 +835,14 @@
         649.8
       ],
       "populacao": 18990,
-      "populacao_formatada": "18.990 hab."
+      "populacao_formatada": "18.990 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -15.1211,
+      "lon": -55.552
     },
     {
       "id": "5103056",
@@ -632,7 +863,14 @@
         358.1
       ],
       "populacao": 9593,
-      "populacao_formatada": "9.593 hab."
+      "populacao_formatada": "9.593 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -11.4481,
+      "lon": -55.0478
     },
     {
       "id": "5103106",
@@ -653,7 +891,14 @@
         604.5
       ],
       "populacao": 6220,
-      "populacao_formatada": "6.220 hab."
+      "populacao_formatada": "6.220 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Médio Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Água Boa",
+      "sede_ers": "Água Boa",
+      "lat": -13.8695,
+      "lon": -51.1483
     },
     {
       "id": "5103205",
@@ -674,7 +919,14 @@
         297.8
       ],
       "populacao": 31370,
-      "populacao_formatada": "31.370 hab."
+      "populacao_formatada": "31.370 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Norte Matogrossense",
+      "polo_macro": "Sinop",
+      "polo_micro": "Colíder",
+      "sede_ers": "Colíder",
+      "lat": -10.631,
+      "lon": -55.4687
     },
     {
       "id": "5103254",
@@ -695,7 +947,14 @@
         224.8
       ],
       "populacao": 25766,
-      "populacao_formatada": "25.766 hab."
+      "populacao_formatada": "25.766 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Noroeste Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Juína",
+      "sede_ers": "Juína",
+      "lat": -9.2924,
+      "lon": -60.3042
     },
     {
       "id": "5103304",
@@ -716,7 +975,14 @@
         538.1
       ],
       "populacao": 18238,
-      "populacao_formatada": "18.238 hab."
+      "populacao_formatada": "18.238 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -13.1936,
+      "lon": -59.7514
     },
     {
       "id": "5103353",
@@ -737,7 +1003,14 @@
         277.5
       ],
       "populacao": 35075,
-      "populacao_formatada": "35.075 hab."
+      "populacao_formatada": "35.075 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Araguaia Xingu",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Porto Alegre do Norte",
+      "sede_ers": "Porto Alegre do Norte",
+      "lat": -10.4041,
+      "lon": -51.6985
     },
     {
       "id": "5103361",
@@ -758,7 +1031,14 @@
         598.2
       ],
       "populacao": 3760,
-      "populacao_formatada": "3.760 hab."
+      "populacao_formatada": "3.760 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -14.6347,
+      "lon": -59.3322
     },
     {
       "id": "5103379",
@@ -779,7 +1059,14 @@
         231
       ],
       "populacao": 11011,
-      "populacao_formatada": "11.011 hab."
+      "populacao_formatada": "11.011 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Noroeste Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Juína",
+      "sede_ers": "Juína",
+      "lat": -9.538,
+      "lon": -58.6751
     },
     {
       "id": "5103403",
@@ -800,7 +1087,14 @@
         719.1
       ],
       "populacao": 650877,
-      "populacao_formatada": "650.877 hab."
+      "populacao_formatada": "650.877 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -15.5055,
+      "lon": -55.8792
     },
     {
       "id": "5103437",
@@ -821,7 +1115,14 @@
         660.7
       ],
       "populacao": 4903,
-      "populacao_formatada": "4.903 hab."
+      "populacao_formatada": "4.903 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.6172,
+      "lon": -57.8764
     },
     {
       "id": "5103452",
@@ -842,7 +1143,14 @@
         596.5
       ],
       "populacao": 7014,
-      "populacao_formatada": "7.014 hab."
+      "populacao_formatada": "7.014 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -14.7301,
+      "lon": -56.9616
     },
     {
       "id": "5103502",
@@ -863,7 +1171,14 @@
         576.7
       ],
       "populacao": 21941,
-      "populacao_formatada": "21.941 hab."
+      "populacao_formatada": "21.941 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Centro Norte",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Diamantino",
+      "sede_ers": "Diamantino",
+      "lat": -14.0958,
+      "lon": -56.8042
     },
     {
       "id": "5103601",
@@ -884,7 +1199,14 @@
         676.7
       ],
       "populacao": 7872,
-      "populacao_formatada": "7.872 hab."
+      "populacao_formatada": "7.872 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -15.6563,
+      "lon": -54.7766
     },
     {
       "id": "5103700",
@@ -905,7 +1227,14 @@
         428.5
       ],
       "populacao": 10521,
-      "populacao_formatada": "10.521 hab."
+      "populacao_formatada": "10.521 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -11.9329,
+      "lon": -54.1847
     },
     {
       "id": "5103809",
@@ -926,7 +1255,14 @@
         654.4
       ],
       "populacao": 3187,
-      "populacao_formatada": "3.187 hab."
+      "populacao_formatada": "3.187 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -15.5273,
+      "lon": -58.7028
     },
     {
       "id": "5103858",
@@ -947,7 +1283,14 @@
         510.3
       ],
       "populacao": 8642,
-      "populacao_formatada": "8.642 hab."
+      "populacao_formatada": "8.642 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Médio Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Água Boa",
+      "sede_ers": "Água Boa",
+      "lat": -12.9958,
+      "lon": -53.4562
     },
     {
       "id": "5103908",
@@ -968,7 +1311,14 @@
         669.2
       ],
       "populacao": 6037,
-      "populacao_formatada": "6.037 hab."
+      "populacao_formatada": "6.037 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -15.5201,
+      "lon": -53.3431
     },
     {
       "id": "5103957",
@@ -989,7 +1339,14 @@
         681.6
       ],
       "populacao": 2905,
-      "populacao_formatada": "2.905 hab."
+      "populacao_formatada": "2.905 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.8392,
+      "lon": -58.3254
     },
     {
       "id": "5104104",
@@ -1010,7 +1367,14 @@
         225.2
       ],
       "populacao": 31024,
-      "populacao_formatada": "31.024 hab."
+      "populacao_formatada": "31.024 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Peixoto",
+      "polo_macro": "Sinop",
+      "polo_micro": "Peixoto de Azevedo",
+      "sede_ers": "Peixoto de Azevedo",
+      "lat": -9.7763,
+      "lon": -54.6213
     },
     {
       "id": "5104203",
@@ -1031,7 +1395,14 @@
         739.9
       ],
       "populacao": 10966,
-      "populacao_formatada": "10.966 hab."
+      "populacao_formatada": "10.966 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -16.3848,
+      "lon": -53.5898
     },
     {
       "id": "5104500",
@@ -1052,7 +1423,14 @@
         640.7
       ],
       "populacao": 2213,
-      "populacao_formatada": "2.213 hab."
+      "populacao_formatada": "2.213 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.3353,
+      "lon": -58.5974
     },
     {
       "id": "5104526",
@@ -1073,7 +1451,14 @@
         405.7
       ],
       "populacao": 7815,
-      "populacao_formatada": "7.815 hab."
+      "populacao_formatada": "7.815 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -12.0172,
+      "lon": -56.0587
     },
     {
       "id": "5104542",
@@ -1094,7 +1479,14 @@
         400.6
       ],
       "populacao": 7539,
-      "populacao_formatada": "7.539 hab."
+      "populacao_formatada": "7.539 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -12.1406,
+      "lon": -56.7548
     },
     {
       "id": "5104559",
@@ -1115,7 +1507,14 @@
         327.1
       ],
       "populacao": 5020,
-      "populacao_formatada": "5.020 hab."
+      "populacao_formatada": "5.020 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Norte Matogrossense",
+      "polo_macro": "Sinop",
+      "polo_micro": "Colíder",
+      "sede_ers": "Colíder",
+      "lat": -11.1109,
+      "lon": -55.59
     },
     {
       "id": "5104609",
@@ -1136,7 +1535,14 @@
         806.8
       ],
       "populacao": 12236,
-      "populacao_formatada": "12.236 hab."
+      "populacao_formatada": "12.236 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -17.3338,
+      "lon": -54.5974
     },
     {
       "id": "5104807",
@@ -1157,7 +1563,14 @@
         703.6
       ],
       "populacao": 28569,
-      "populacao_formatada": "28.569 hab."
+      "populacao_formatada": "28.569 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -15.9754,
+      "lon": -55.1919
     },
     {
       "id": "5104906",
@@ -1178,7 +1591,14 @@
         642.7
       ],
       "populacao": 7426,
-      "populacao_formatada": "7.426 hab."
+      "populacao_formatada": "7.426 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -15.3378,
+      "lon": -56.5729
     },
     {
       "id": "5105002",
@@ -1199,7 +1619,14 @@
         647.3
       ],
       "populacao": 8367,
-      "populacao_formatada": "8.367 hab."
+      "populacao_formatada": "8.367 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -15.3043,
+      "lon": -58.8656
     },
     {
       "id": "5105101",
@@ -1220,7 +1647,14 @@
         388.1
       ],
       "populacao": 34906,
-      "populacao_formatada": "34.906 hab."
+      "populacao_formatada": "34.906 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Arinos",
+      "polo_macro": "Sinop",
+      "polo_micro": "Juara",
+      "sede_ers": "Juara",
+      "lat": -11.0237,
+      "lon": -57.6184
     },
     {
       "id": "5105150",
@@ -1241,7 +1675,14 @@
         400.1
       ],
       "populacao": 45869,
-      "populacao_formatada": "45.869 hab."
+      "populacao_formatada": "45.869 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Noroeste Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Juína",
+      "sede_ers": "Juína",
+      "lat": -11.5321,
+      "lon": -59.3245
     },
     {
       "id": "5105176",
@@ -1262,7 +1703,14 @@
         280.7
       ],
       "populacao": 10213,
-      "populacao_formatada": "10.213 hab."
+      "populacao_formatada": "10.213 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Noroeste Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Juína",
+      "sede_ers": "Juína",
+      "lat": -10.3973,
+      "lon": -58.6249
     },
     {
       "id": "5105200",
@@ -1283,7 +1731,14 @@
         717.9
       ],
       "populacao": 11480,
-      "populacao_formatada": "11.480 hab."
+      "populacao_formatada": "11.480 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -16.1828,
+      "lon": -54.9042
     },
     {
       "id": "5105234",
@@ -1304,7 +1759,14 @@
         660.6
       ],
       "populacao": 4790,
-      "populacao_formatada": "4.790 hab."
+      "populacao_formatada": "4.790 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.3769,
+      "lon": -57.7793
     },
     {
       "id": "5105259",
@@ -1325,7 +1787,14 @@
         483
       ],
       "populacao": 83798,
-      "populacao_formatada": "83.798 hab."
+      "populacao_formatada": "83.798 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -13.0372,
+      "lon": -56.1673
     },
     {
       "id": "5105309",
@@ -1346,7 +1815,14 @@
         320.2
       ],
       "populacao": 2509,
-      "populacao_formatada": "2.509 hab."
+      "populacao_formatada": "2.509 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Norte Araguaia Karajá",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "São Félix do Araguaia",
+      "sede_ers": "São Félix do Araguaia",
+      "lat": -11.0147,
+      "lon": -50.9458
     },
     {
       "id": "5105580",
@@ -1367,7 +1843,14 @@
         327.8
       ],
       "populacao": 11396,
-      "populacao_formatada": "11.396 hab."
+      "populacao_formatada": "11.396 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Norte Matogrossense",
+      "polo_macro": "Sinop",
+      "polo_micro": "Colíder",
+      "sede_ers": "Colíder",
+      "lat": -10.8863,
+      "lon": -54.0534
     },
     {
       "id": "5105606",
@@ -1388,7 +1871,14 @@
         250.5
       ],
       "populacao": 20091,
-      "populacao_formatada": "20.091 hab."
+      "populacao_formatada": "20.091 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Peixoto",
+      "polo_macro": "Sinop",
+      "polo_micro": "Peixoto de Azevedo",
+      "sede_ers": "Peixoto de Azevedo",
+      "lat": -10.0139,
+      "lon": -54.3566
     },
     {
       "id": "5105622",
@@ -1409,7 +1899,14 @@
         666.3
       ],
       "populacao": 26785,
-      "populacao_formatada": "26.785 hab."
+      "populacao_formatada": "26.785 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.6542,
+      "lon": -58.055
     },
     {
       "id": "5105903",
@@ -1430,7 +1927,14 @@
         583.3
       ],
       "populacao": 15492,
-      "populacao_formatada": "15.492 hab."
+      "populacao_formatada": "15.492 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Centro Norte",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Diamantino",
+      "sede_ers": "Diamantino",
+      "lat": -14.3768,
+      "lon": -55.8122
     },
     {
       "id": "5106000",
@@ -1451,7 +1955,14 @@
         574.2
       ],
       "populacao": 5956,
-      "populacao_formatada": "5.956 hab."
+      "populacao_formatada": "5.956 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Centro Norte",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Diamantino",
+      "sede_ers": "Diamantino",
+      "lat": -14.3479,
+      "lon": -56.7225
     },
     {
       "id": "5106109",
@@ -1472,7 +1983,14 @@
         709.7
       ],
       "populacao": 12940,
-      "populacao_formatada": "12.940 hab."
+      "populacao_formatada": "12.940 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -15.8393,
+      "lon": -56.4835
     },
     {
       "id": "5106158",
@@ -1493,7 +2011,14 @@
         255.1
       ],
       "populacao": 13635,
-      "populacao_formatada": "13.635 hab."
+      "populacao_formatada": "13.635 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Alto Tapajós",
+      "polo_macro": "Sinop",
+      "polo_micro": "Alta Floresta",
+      "sede_ers": "Alta Floresta",
+      "lat": -9.7686,
+      "lon": -58.077
     },
     {
       "id": "5106208",
@@ -1514,7 +2039,14 @@
         606.2
       ],
       "populacao": 3932,
-      "populacao_formatada": "3.932 hab."
+      "populacao_formatada": "3.932 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -14.7844,
+      "lon": -55.0511
     },
     {
       "id": "5106216",
@@ -1535,7 +2067,14 @@
         304.1
       ],
       "populacao": 11707,
-      "populacao_formatada": "11.707 hab."
+      "populacao_formatada": "11.707 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Norte Matogrossense",
+      "polo_macro": "Sinop",
+      "polo_micro": "Colíder",
+      "sede_ers": "Colíder",
+      "lat": -10.7002,
+      "lon": -56.0418
     },
     {
       "id": "5108808",
@@ -1556,7 +2095,14 @@
         259.8
       ],
       "populacao": 4590,
-      "populacao_formatada": "4.590 hab."
+      "populacao_formatada": "4.590 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Norte Matogrossense",
+      "polo_macro": "Sinop",
+      "polo_micro": "Colíder",
+      "sede_ers": "Colíder",
+      "lat": -10.2938,
+      "lon": -55.3384
     },
     {
       "id": "5106182",
@@ -1577,7 +2123,14 @@
         587.3
       ],
       "populacao": 6670,
-      "populacao_formatada": "6.670 hab."
+      "populacao_formatada": "6.670 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -14.2999,
+      "lon": -59.7714
     },
     {
       "id": "5108857",
@@ -1598,7 +2151,14 @@
         557.8
       ],
       "populacao": 3529,
-      "populacao_formatada": "3.529 hab."
+      "populacao_formatada": "3.529 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -14.2905,
+      "lon": -57.2574
     },
     {
       "id": "5108907",
@@ -1619,7 +2179,14 @@
         509.8
       ],
       "populacao": 5846,
-      "populacao_formatada": "5.846 hab."
+      "populacao_formatada": "5.846 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Centro Norte",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Diamantino",
+      "sede_ers": "Diamantino",
+      "lat": -12.7837,
+      "lon": -57.2203
     },
     {
       "id": "5108956",
@@ -1640,7 +2207,14 @@
         245.6
       ],
       "populacao": 8313,
-      "populacao_formatada": "8.313 hab."
+      "populacao_formatada": "8.313 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Alto Tapajós",
+      "polo_macro": "Sinop",
+      "polo_micro": "Alta Floresta",
+      "sede_ers": "Alta Floresta",
+      "lat": -9.9702,
+      "lon": -57.2456
     },
     {
       "id": "5106224",
@@ -1661,7 +2235,14 @@
         541.5
       ],
       "populacao": 55839,
-      "populacao_formatada": "55.839 hab."
+      "populacao_formatada": "55.839 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -13.6294,
+      "lon": -56.106
     },
     {
       "id": "5106174",
@@ -1682,7 +2263,14 @@
         577.1
       ],
       "populacao": 4200,
-      "populacao_formatada": "4.200 hab."
+      "populacao_formatada": "4.200 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Médio Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Água Boa",
+      "sede_ers": "Água Boa",
+      "lat": -14.1562,
+      "lon": -51.89
     },
     {
       "id": "5106232",
@@ -1703,7 +2291,14 @@
         597.8
       ],
       "populacao": 16352,
-      "populacao_formatada": "16.352 hab."
+      "populacao_formatada": "16.352 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -14.8044,
+      "lon": -57.4216
     },
     {
       "id": "5106190",
@@ -1724,7 +2319,14 @@
         318.2
       ],
       "populacao": 4239,
-      "populacao_formatada": "4.239 hab."
+      "populacao_formatada": "4.239 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Norte Matogrossense",
+      "polo_macro": "Sinop",
+      "polo_micro": "Colíder",
+      "sede_ers": "Colíder",
+      "lat": -10.9188,
+      "lon": -54.9067
     },
     {
       "id": "5106240",
@@ -1745,7 +2347,14 @@
         514.7
       ],
       "populacao": 11530,
-      "populacao_formatada": "11.530 hab."
+      "populacao_formatada": "11.530 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -12.9962,
+      "lon": -54.7594
     },
     {
       "id": "5106257",
@@ -1766,7 +2375,14 @@
         614.7
       ],
       "populacao": 24345,
-      "populacao_formatada": "24.345 hab."
+      "populacao_formatada": "24.345 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -14.5968,
+      "lon": -52.4069
     },
     {
       "id": "5106273",
@@ -1787,7 +2403,14 @@
         336.1
       ],
       "populacao": 3349,
-      "populacao_formatada": "3.349 hab."
+      "populacao_formatada": "3.349 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Arinos",
+      "polo_macro": "Sinop",
+      "polo_micro": "Juara",
+      "sede_ers": "Juara",
+      "lat": -11.3835,
+      "lon": -57.3037
     },
     {
       "id": "5106265",
@@ -1808,7 +2431,14 @@
         235.7
       ],
       "populacao": 6520,
-      "populacao_formatada": "6.520 hab."
+      "populacao_formatada": "6.520 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Peixoto",
+      "polo_macro": "Sinop",
+      "polo_micro": "Peixoto de Azevedo",
+      "sede_ers": "Peixoto de Azevedo",
+      "lat": -9.7522,
+      "lon": -55.4038
     },
     {
       "id": "5106315",
@@ -1829,7 +2459,14 @@
         440
       ],
       "populacao": 2015,
-      "populacao_formatada": "2.015 hab."
+      "populacao_formatada": "2.015 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Norte Araguaia Karajá",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "São Félix do Araguaia",
+      "sede_ers": "São Félix do Araguaia",
+      "lat": -12.3133,
+      "lon": -50.8881
     },
     {
       "id": "5106281",
@@ -1850,7 +2487,14 @@
         631.9
       ],
       "populacao": 6919,
-      "populacao_formatada": "6.919 hab."
+      "populacao_formatada": "6.919 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -15.0781,
+      "lon": -53.2583
     },
     {
       "id": "5106299",
@@ -1871,7 +2515,14 @@
         217.2
       ],
       "populacao": 11671,
-      "populacao_formatada": "11.671 hab."
+      "populacao_formatada": "11.671 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Alto Tapajós",
+      "polo_macro": "Sinop",
+      "polo_micro": "Alta Floresta",
+      "sede_ers": "Alta Floresta",
+      "lat": -9.5936,
+      "lon": -56.6826
     },
     {
       "id": "5106307",
@@ -1892,7 +2543,14 @@
         580.6
       ],
       "populacao": 26423,
-      "populacao_formatada": "26.423 hab."
+      "populacao_formatada": "26.423 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -13.6779,
+      "lon": -54.109
     },
     {
       "id": "5106372",
@@ -1913,7 +2571,14 @@
         764.1
       ],
       "populacao": 18066,
-      "populacao_formatada": "18.066 hab."
+      "populacao_formatada": "18.066 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -16.7952,
+      "lon": -54.2491
     },
     {
       "id": "5106422",
@@ -1934,7 +2599,14 @@
         279.7
       ],
       "populacao": 32714,
-      "populacao_formatada": "32.714 hab."
+      "populacao_formatada": "32.714 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Peixoto",
+      "polo_macro": "Sinop",
+      "polo_micro": "Peixoto de Azevedo",
+      "sede_ers": "Peixoto de Azevedo",
+      "lat": -10.1495,
+      "lon": -53.5942
     },
     {
       "id": "5106455",
@@ -1955,7 +2627,14 @@
         585.9
       ],
       "populacao": 3166,
-      "populacao_formatada": "3.166 hab."
+      "populacao_formatada": "3.166 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -14.5887,
+      "lon": -54.6739
     },
     {
       "id": "5106505",
@@ -1976,7 +2655,14 @@
         825.6
       ],
       "populacao": 31217,
-      "populacao_formatada": "31.217 hab."
+      "populacao_formatada": "31.217 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -16.7827,
+      "lon": -56.9446
     },
     {
       "id": "5106653",
@@ -1997,7 +2683,14 @@
         688.4
       ],
       "populacao": 6932,
-      "populacao_formatada": "6.932 hab."
+      "populacao_formatada": "6.932 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -15.9321,
+      "lon": -52.7214
     },
     {
       "id": "5106703",
@@ -2018,7 +2711,14 @@
         740.9
       ],
       "populacao": 2008,
-      "populacao_formatada": "2.008 hab."
+      "populacao_formatada": "2.008 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -16.659,
+      "lon": -52.9369
     },
     {
       "id": "5106752",
@@ -2039,7 +2739,14 @@
         693.2
       ],
       "populacao": 52018,
-      "populacao_formatada": "52.018 hab."
+      "populacao_formatada": "52.018 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -15.5168,
+      "lon": -59.4577
     },
     {
       "id": "5106778",
@@ -2060,7 +2767,14 @@
         299.6
       ],
       "populacao": 12127,
-      "populacao_formatada": "12.127 hab."
+      "populacao_formatada": "12.127 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Araguaia Xingu",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Porto Alegre do Norte",
+      "sede_ers": "Porto Alegre do Norte",
+      "lat": -10.826,
+      "lon": -51.7137
     },
     {
       "id": "5106802",
@@ -2081,7 +2795,14 @@
         386.2
       ],
       "populacao": 5593,
-      "populacao_formatada": "5.593 hab."
+      "populacao_formatada": "5.593 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Arinos",
+      "polo_macro": "Sinop",
+      "polo_micro": "Juara",
+      "sede_ers": "Juara",
+      "lat": -11.7349,
+      "lon": -56.7457
     },
     {
       "id": "5106828",
@@ -2102,7 +2823,14 @@
         701.8
       ],
       "populacao": 10204,
-      "populacao_formatada": "10.204 hab."
+      "populacao_formatada": "10.204 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.9567,
+      "lon": -58.9824
     },
     {
       "id": "5106851",
@@ -2123,7 +2851,14 @@
         667.3
       ],
       "populacao": 3224,
-      "populacao_formatada": "3.224 hab."
+      "populacao_formatada": "3.224 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -15.5212,
+      "lon": -57.2152
     },
     {
       "id": "5107008",
@@ -2144,7 +2879,14 @@
         706.8
       ],
       "populacao": 23283,
-      "populacao_formatada": "23.283 hab."
+      "populacao_formatada": "23.283 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -15.8513,
+      "lon": -54.1858
     },
     {
       "id": "5107040",
@@ -2165,7 +2907,14 @@
         653.1
       ],
       "populacao": 85146,
-      "populacao_formatada": "85.146 hab."
+      "populacao_formatada": "85.146 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -15.0968,
+      "lon": -54.22
     },
     {
       "id": "5107065",
@@ -2186,7 +2935,14 @@
         466.5
       ],
       "populacao": 26769,
-      "populacao_formatada": "26.769 hab."
+      "populacao_formatada": "26.769 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Médio Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Água Boa",
+      "sede_ers": "Água Boa",
+      "lat": -12.1588,
+      "lon": -52.7433
     },
     {
       "id": "5107156",
@@ -2207,7 +2963,14 @@
         615.4
       ],
       "populacao": 2122,
-      "populacao_formatada": "2.122 hab."
+      "populacao_formatada": "2.122 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -14.9284,
+      "lon": -58.4577
     },
     {
       "id": "5107180",
@@ -2228,7 +2991,14 @@
         487.5
       ],
       "populacao": 10089,
-      "populacao_formatada": "10.089 hab."
+      "populacao_formatada": "10.089 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Médio Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Água Boa",
+      "sede_ers": "Água Boa",
+      "lat": -12.8749,
+      "lon": -51.5683
     },
     {
       "id": "5107198",
@@ -2249,7 +3019,14 @@
         725.9
       ],
       "populacao": 2593,
-      "populacao_formatada": "2.593 hab."
+      "populacao_formatada": "2.593 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -16.4943,
+      "lon": -52.7599
     },
     {
       "id": "5107206",
@@ -2270,7 +3047,14 @@
         632.9
       ],
       "populacao": 4535,
-      "populacao_formatada": "4.535 hab."
+      "populacao_formatada": "4.535 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.273,
+      "lon": -58.1498
     },
     {
       "id": "5107578",
@@ -2291,7 +3075,14 @@
         295.9
       ],
       "populacao": 3505,
-      "populacao_formatada": "3.505 hab."
+      "populacao_formatada": "3.505 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -10.4631,
+      "lon": -61.01
     },
     {
       "id": "5107602",
@@ -2312,7 +3103,14 @@
         763.2
       ],
       "populacao": 244911,
-      "populacao_formatada": "244.911 hab."
+      "populacao_formatada": "244.911 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -16.5676,
+      "lon": -54.6847
     },
     {
       "id": "5107701",
@@ -2333,7 +3131,14 @@
         642.9
       ],
       "populacao": 15453,
-      "populacao_formatada": "15.453 hab."
+      "populacao_formatada": "15.453 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Centro Norte",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Diamantino",
+      "sede_ers": "Diamantino",
+      "lat": -14.7466,
+      "lon": -55.9155
     },
     {
       "id": "5107750",
@@ -2354,7 +3159,14 @@
         619.3
       ],
       "populacao": 3679,
-      "populacao_formatada": "3.679 hab."
+      "populacao_formatada": "3.679 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.0509,
+      "lon": -58.0508
     },
     {
       "id": "5107248",
@@ -2375,7 +3187,14 @@
         390.8
       ],
       "populacao": 5374,
-      "populacao_formatada": "5.374 hab."
+      "populacao_formatada": "5.374 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -11.9346,
+      "lon": -54.8996
     },
     {
       "id": "5107743",
@@ -2396,7 +3215,14 @@
         251.2
       ],
       "populacao": 2661,
-      "populacao_formatada": "2.661 hab."
+      "populacao_formatada": "2.661 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Araguaia Xingu",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Porto Alegre do Norte",
+      "sede_ers": "Porto Alegre do Norte",
+      "lat": -10.0645,
+      "lon": -52.5415
     },
     {
       "id": "5107768",
@@ -2417,7 +3243,14 @@
         543.7
       ],
       "populacao": 3276,
-      "populacao_formatada": "3.276 hab."
+      "populacao_formatada": "3.276 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -13.8331,
+      "lon": -55.2941
     },
     {
       "id": "5107776",
@@ -2438,7 +3271,14 @@
         279.6
       ],
       "populacao": 7596,
-      "populacao_formatada": "7.596 hab."
+      "populacao_formatada": "7.596 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Araguaia Xingu",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Porto Alegre do Norte",
+      "sede_ers": "Porto Alegre do Norte",
+      "lat": -10.3327,
+      "lon": -50.7923
     },
     {
       "id": "5107263",
@@ -2459,7 +3299,14 @@
         568.5
       ],
       "populacao": 2519,
-      "populacao_formatada": "2.519 hab."
+      "populacao_formatada": "2.519 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -14.4505,
+      "lon": -57.3468
     },
     {
       "id": "5107800",
@@ -2480,7 +3327,14 @@
         784.3
       ],
       "populacao": 15246,
-      "populacao_formatada": "15.246 hab."
+      "populacao_formatada": "15.246 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -16.5358,
+      "lon": -55.4473
     },
     {
       "id": "5107792",
@@ -2501,7 +3355,14 @@
         611.3
       ],
       "populacao": 4099,
-      "populacao_formatada": "4.099 hab."
+      "populacao_formatada": "4.099 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -14.8052,
+      "lon": -53.6699
     },
     {
       "id": "5107859",
@@ -2522,7 +3383,14 @@
         381.7
       ],
       "populacao": 13621,
-      "populacao_formatada": "13.621 hab."
+      "populacao_formatada": "13.621 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Norte Araguaia Karajá",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "São Félix do Araguaia",
+      "sede_ers": "São Félix do Araguaia",
+      "lat": -11.4546,
+      "lon": -51.9695
     },
     {
       "id": "5107297",
@@ -2543,7 +3411,14 @@
         726.6
       ],
       "populacao": 2875,
-      "populacao_formatada": "2.875 hab."
+      "populacao_formatada": "2.875 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -16.4706,
+      "lon": -54.2679
     },
     {
       "id": "5107305",
@@ -2564,7 +3439,14 @@
         518.2
       ],
       "populacao": 14911,
-      "populacao_formatada": "14.911 hab."
+      "populacao_formatada": "14.911 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Centro Norte",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Diamantino",
+      "sede_ers": "Diamantino",
+      "lat": -13.5512,
+      "lon": -56.8084
     },
     {
       "id": "5107354",
@@ -2585,7 +3467,14 @@
         304.7
       ],
       "populacao": 5964,
-      "populacao_formatada": "5.964 hab."
+      "populacao_formatada": "5.964 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Araguaia Xingu",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Porto Alegre do Norte",
+      "sede_ers": "Porto Alegre do Norte",
+      "lat": -10.6966,
+      "lon": -52.617
     },
     {
       "id": "5107107",
@@ -2606,7 +3495,14 @@
         655.9
       ],
       "populacao": 17849,
-      "populacao_formatada": "17.849 hab."
+      "populacao_formatada": "17.849 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Oeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Cáceres",
+      "sede_ers": "Cáceres",
+      "lat": -15.5665,
+      "lon": -58.2974
     },
     {
       "id": "5107404",
@@ -2627,7 +3523,14 @@
         682.4
       ],
       "populacao": 4191,
-      "populacao_formatada": "4.191 hab."
+      "populacao_formatada": "4.191 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -15.9539,
+      "lon": -54.74
     },
     {
       "id": "5107875",
@@ -2648,7 +3551,14 @@
         524.5
       ],
       "populacao": 28944,
-      "populacao_formatada": "28.944 hab."
+      "populacao_formatada": "28.944 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -13.1545,
+      "lon": -58.6536
     },
     {
       "id": "5107883",
@@ -2669,7 +3579,14 @@
         398.9
       ],
       "populacao": 1800,
-      "populacao_formatada": "1.800 hab."
+      "populacao_formatada": "1.800 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Norte Araguaia Karajá",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "São Félix do Araguaia",
+      "sede_ers": "São Félix do Araguaia",
+      "lat": -12.0228,
+      "lon": -51.3621
     },
     {
       "id": "5107909",
@@ -2690,7 +3607,14 @@
         386.4
       ],
       "populacao": 196312,
-      "populacao_formatada": "196.312 hab."
+      "populacao_formatada": "196.312 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -11.7108,
+      "lon": -55.5015
     },
     {
       "id": "5107925",
@@ -2711,7 +3635,14 @@
         498.9
       ],
       "populacao": 110635,
-      "populacao_formatada": "110.635 hab."
+      "populacao_formatada": "110.635 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -12.7372,
+      "lon": -55.6814
     },
     {
       "id": "5107941",
@@ -2732,7 +3663,14 @@
         345.3
       ],
       "populacao": 9818,
-      "populacao_formatada": "9.818 hab."
+      "populacao_formatada": "9.818 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Arinos",
+      "polo_macro": "Sinop",
+      "polo_micro": "Juara",
+      "sede_ers": "Juara",
+      "lat": -11.214,
+      "lon": -56.4965
     },
     {
       "id": "5107958",
@@ -2753,7 +3691,14 @@
         599.8
       ],
       "populacao": 106434,
-      "populacao_formatada": "106.434 hab."
+      "populacao_formatada": "106.434 hab.",
+      "macrorregiao": "Centro-Noroeste",
+      "regiao_saude": "Médio Norte Matogrossense",
+      "polo_macro": "Tangará da Serra",
+      "polo_micro": "Tangará da Serra",
+      "sede_ers": "Tangará da Serra",
+      "lat": -14.4306,
+      "lon": -58.2917
     },
     {
       "id": "5108006",
@@ -2774,7 +3719,14 @@
         440.6
       ],
       "populacao": 14370,
-      "populacao_formatada": "14.370 hab."
+      "populacao_formatada": "14.370 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -12.5681,
+      "lon": -56.5318
     },
     {
       "id": "5108055",
@@ -2795,7 +3747,14 @@
         277.2
       ],
       "populacao": 10616,
-      "populacao_formatada": "10.616 hab."
+      "populacao_formatada": "10.616 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Vale do Peixoto",
+      "polo_macro": "Sinop",
+      "polo_micro": "Peixoto de Azevedo",
+      "sede_ers": "Peixoto de Azevedo",
+      "lat": -10.5126,
+      "lon": -54.9843
     },
     {
       "id": "5108105",
@@ -2816,7 +3775,14 @@
         699.5
       ],
       "populacao": 3025,
-      "populacao_formatada": "3.025 hab."
+      "populacao_formatada": "3.025 hab.",
+      "macrorregiao": "Sul",
+      "regiao_saude": "Sul Matogrossense",
+      "polo_macro": "Rondonópolis",
+      "polo_micro": "Rondonópolis",
+      "sede_ers": "Rondonópolis",
+      "lat": -15.9064,
+      "lon": -53.4561
     },
     {
       "id": "5108204",
@@ -2837,7 +3803,14 @@
         722.1
       ],
       "populacao": 4164,
-      "populacao_formatada": "4.164 hab."
+      "populacao_formatada": "4.164 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Garças Araguaia",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Barra do Garças",
+      "sede_ers": "Barra do Garças",
+      "lat": -16.2946,
+      "lon": -52.8898
     },
     {
       "id": "5108303",
@@ -2858,7 +3831,14 @@
         363.5
       ],
       "populacao": 3838,
-      "populacao_formatada": "3.838 hab."
+      "populacao_formatada": "3.838 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -11.5278,
+      "lon": -54.3166
     },
     {
       "id": "5108352",
@@ -2879,7 +3859,14 @@
         637
       ],
       "populacao": 2904,
-      "populacao_formatada": "2.904 hab."
+      "populacao_formatada": "2.904 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -14.9659,
+      "lon": -58.9631
     },
     {
       "id": "5108402",
@@ -2900,7 +3887,14 @@
         660.9
       ],
       "populacao": 300078,
-      "populacao_formatada": "300.078 hab."
+      "populacao_formatada": "300.078 hab.",
+      "macrorregiao": "Centro-Norte",
+      "regiao_saude": "Baixada Cuiabana",
+      "polo_macro": "Cuiabá",
+      "polo_micro": "Cuiabá",
+      "sede_ers": "Cuiabá",
+      "lat": -15.5626,
+      "lon": -56.2428
     },
     {
       "id": "5108501",
@@ -2921,7 +3915,14 @@
         498.8
       ],
       "populacao": 12800,
-      "populacao_formatada": "12.800 hab."
+      "populacao_formatada": "12.800 hab.",
+      "macrorregiao": "Norte",
+      "regiao_saude": "Teles Pires",
+      "polo_macro": "Sinop",
+      "polo_micro": "Sinop",
+      "sede_ers": "Sinop",
+      "lat": -12.4222,
+      "lon": -55.3465
     },
     {
       "id": "5105507",
@@ -2942,7 +3943,14 @@
         699.7
       ],
       "populacao": 16774,
-      "populacao_formatada": "16.774 hab."
+      "populacao_formatada": "16.774 hab.",
+      "macrorregiao": "Oeste",
+      "regiao_saude": "Sudoeste Matogrossense",
+      "polo_macro": "Cáceres",
+      "polo_micro": "Pontes e Lacerda",
+      "sede_ers": "Pontes e Lacerda",
+      "lat": -15.1908,
+      "lon": -59.9907
     },
     {
       "id": "5108600",
@@ -2963,7 +3971,14 @@
         245.5
       ],
       "populacao": 19888,
-      "populacao_formatada": "19.888 hab."
+      "populacao_formatada": "19.888 hab.",
+      "macrorregiao": "Leste",
+      "regiao_saude": "Araguaia Xingu",
+      "polo_macro": "Barra do Garças",
+      "polo_micro": "Porto Alegre do Norte",
+      "sede_ers": "Porto Alegre do Norte",
+      "lat": -9.9807,
+      "lon": -51.4063
     }
   ]
 }
