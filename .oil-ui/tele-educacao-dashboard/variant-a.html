@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variação A • Split Clínico (Foco na Próxima Sessão)</title>
+    <style>
+        :root {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --border-subtle: rgba(15, 23, 42, 0.08);
+            --border-hover: rgba(0, 75, 141, 0.25);
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --text-subtle: #94a3b8;
+            --primary: #004b8d;
+            --primary-dark: #003366;
+            --primary-light: #e0f2fe;
+            --accent-green: #00843d;
+            --accent-green-light: #dcfce7;
+            --live-red: #ef4444;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Bar Silenciosa */
+        .topbar {
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .brand-badge {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.9rem;
+            letter-spacing: -0.5px;
+        }
+        .brand-text h1 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.1;
+        }
+        .brand-text span {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .user-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .doctor-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-subtle);
+        }
+
+        /* Container Principal */
+        .dashboard-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Cabeçalho de Boas-vindas Objetivo (Sem banners grandes) */
+        .page-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+        .page-header h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+        }
+        .header-meta {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Linha de Indicadores Rápidos (Clean, sem caixas pesadas) */
+        .quick-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .metric-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1.1rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .metric-card:hover {
+            border-color: var(--border-hover);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+        .metric-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+        }
+        .metric-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: baseline;
+            gap: 0.35rem;
+        }
+        .metric-sub {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+        .metric-progress {
+            width: 100%;
+            height: 4px;
+            background: #f1f5f9;
+            border-radius: 99px;
+            margin-top: 0.4rem;
+            overflow: hidden;
+        }
+        .metric-bar {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 99px;
+        }
+
+        /* Split Flow Layout (Primeira Dobra) */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 1.75rem;
+        }
+
+        /* Cartão de Foco: Próxima Sessão Iminente */
+        .hero-focus-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .hero-header-tag {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #fef2f2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 0.35rem 0.75rem;
+            border-radius: 99px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .status-pill-pulse {
+            width: 7px;
+            height: 7px;
+            background: var(--live-red);
+            border-radius: 50%;
+            animation: pulse-dot 1.5s infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.3); }
+        }
+
+        .countdown-chip {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 0.35rem 0.75rem;
+            border-radius: 8px;
+        }
+
+        .session-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-main);
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.3px;
+        }
+
+        .session-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .session-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .speaker-box {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 2rem;
+        }
+        .speaker-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            border: 2px solid white;
+            box-shadow: 0 0 0 1px var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        .speaker-details h4 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+        .speaker-details p {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* MOMENTO MEMORÁVEL: Botão de Acesso com Feedback Tátil Visual Excepcional */
+        .btn-live-access {
+            position: relative;
+            background: linear-gradient(135deg, #004b8d 0%, #0284c7 100%);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 1.15rem 2rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.85rem;
+            box-shadow: 0 4px 14px rgba(0, 75, 141, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        /* Efeito Shimmer Gradiente Sutil */
+        .btn-live-access::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transition: 0.6s ease;
+        }
+        .btn-live-access:hover::before {
+            left: 100%;
+        }
+
+        .btn-live-access:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 75, 141, 0.35), 0 2px 4px rgba(0, 0, 0, 0.08);
+            background: linear-gradient(135deg, #00386d 0%, #0369a1 100%);
+        }
+
+        /* Feedback Tátil e Pressão Física no Clique */
+        .btn-live-access:active {
+            transform: translateY(1px) scale(0.985);
+            box-shadow: 0 2px 8px rgba(0, 75, 141, 0.3);
+        }
+
+        .btn-icon-pulse {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        /* Painel Lateral Direito: Próximas Aulas e Fila Cronológica */
+        .side-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+        .section-header h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.2px;
+        }
+        .section-header a {
+            font-size: 0.78rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .section-header a:hover {
+            text-decoration: underline;
+        }
+
+        .agenda-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .agenda-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            padding: 1rem 1.15rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: all 0.2s;
+        }
+        .agenda-item:hover {
+            border-color: var(--border-hover);
+            transform: translateX(2px);
+        }
+        .agenda-time {
+            min-width: 65px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--primary);
+            background: #f1f5f9;
+            padding: 0.4rem 0.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .agenda-content h5 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.3;
+            margin-bottom: 0.25rem;
+        }
+        .agenda-content p {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+        }
+
+        /* Card de Teleconsultorias em Andamento */
+        .teleconsult-quick-card {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .teleconsult-info h5 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #166534;
+        }
+        .teleconsult-info p {
+            font-size: 0.75rem;
+            color: #15803d;
+        }
+        .btn-teleconsult-action {
+            font-size: 0.75rem;
+            font-weight: 700;
+            background: var(--accent-green);
+            color: white;
+            padding: 0.45rem 0.85rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .btn-teleconsult-action:hover {
+            background: #006830;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar Institucional -->
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-badge">MT</div>
+            <div class="brand-text">
+                <h1>Tele Educação MT</h1>
+                <span>Saúde Digital • SES-MT</span>
+            </div>
+        </div>
+
+        <div class="user-nav">
+            <div class="doctor-badge">
+                <div class="avatar">LM</div>
+                <div>
+                    <div>Dr. Lucas Mendes</div>
+                    <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 400;">UBS Primavera do Leste • ERS Rondonópolis</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="dashboard-container">
+        <!-- Título de Boas-vindas Limpo e Funcional -->
+        <div class="page-header">
+            <div>
+                <h2>Área do Aluno & Profissional</h2>
+                <div class="header-meta">
+                    <span class="online-dot"></span>
+                    <span>Sistema de Transmissão Ativo • Polo Central Cuiabá</span>
+                </div>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--text-muted);">
+                Hoje: <strong style="color: var(--text-main);">10 de Novembro de 2026</strong>
+            </div>
+        </div>
+
+        <!-- Indicadores Rápidos (Regra da Interface Silenciosa) -->
+        <section class="quick-metrics">
+            <div class="metric-card">
+                <span class="metric-label">Carga Horária Acumulada</span>
+                <div class="metric-value">48h <span class="metric-sub">/ 60h</span></div>
+                <div class="metric-progress">
+                    <div class="metric-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <span class="metric-label">Frequência em Aulas</span>
+                <div class="metric-value">92% <span class="metric-sub">(Meta: 75%)</span></div>
+                <div class="metric-progress">
+                    <div class="metric-bar" style="width: 92%; background-color: var(--accent-green);"></div>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <span class="metric-label">Certificados Disponíveis</span>
+                <div class="metric-value">4 <span class="metric-sub">emitidos</span></div>
+                <div style="font-size: 0.72rem; color: var(--primary); font-weight: 600; margin-top: 0.35rem;">
+                    Download imediato com autenticação
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <span class="metric-label">Teleconsultorias Vinculadas</span>
+                <div class="metric-value">2 <span class="metric-sub">hoje</span></div>
+                <div style="font-size: 0.72rem; color: #166534; font-weight: 600; margin-top: 0.35rem;">
+                    Ambulatório SDMT em andamento
+                </div>
+            </div>
+        </section>
+
+        <!-- Primeira Dobra: Split Flow Clínico -->
+        <div class="split-layout">
+            <!-- Coluna de Foco: Próxima Aula / Sessão Iminente -->
+            <section class="hero-focus-card">
+                <div>
+                    <div class="hero-header-tag">
+                        <span class="status-pill">
+                            <span class="status-pill-pulse"></span>
+                            Transmissão Iminente
+                        </span>
+                        <span class="countdown-chip">Inicia em 22 min (14:30)</span>
+                    </div>
+
+                    <h3 class="session-title">
+                        Protocolo de Teledermatologia e Triagem de Lesões Cutâneas no SUS-MT
+                    </h3>
+
+                    <div class="session-info">
+                        <div class="session-info-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>14:30 às 16:00 (Horário de MT)</span>
+                        </div>
+                        <div class="session-info-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z"></path></svg>
+                            <span>Sala Virtual 04 • Comodato SES/UFSC</span>
+                        </div>
+                        <div class="session-info-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Presença Obrigatória (Módulo II)</span>
+                        </div>
+                    </div>
+
+                    <div class="speaker-box">
+                        <div class="speaker-avatar">CF</div>
+                        <div class="speaker-details">
+                            <h4>Dra. Camila Fontes</h4>
+                            <p>Médica Dermatologista • Hospital de Câncer / Teleconsultora SES-MT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Momento Memorável de Interação -->
+                <button class="btn-live-access" id="btn-entrar-sala" onclick="simularEntrada()">
+                    <span class="btn-icon-pulse">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    </span>
+                    <span>Acessar Sala Virtual Interativa</span>
+                </button>
+            </section>
+
+            <!-- Coluna Direita: Agenda das Próximas 48h -->
+            <section class="side-panel">
+                <div class="section-header">
+                    <h3>Próximas Sessões Agendadas</h3>
+                    <a href="#calendario">Ver mês completo</a>
+                </div>
+
+                <div class="agenda-list">
+                    <div class="agenda-item">
+                        <div class="agenda-time">
+                            <div>AMANHÃ</div>
+                            <div style="font-size: 0.9rem; color: var(--text-main);">09:00</div>
+                        </div>
+                        <div class="agenda-content">
+                            <h5>Manejo Clínico em Teleestomatologia Bucal</h5>
+                            <p>Dra. Diurianne França • Parceria UFPB e SES-MT</p>
+                        </div>
+                    </div>
+
+                    <div class="agenda-item">
+                        <div class="agenda-time">
+                            <div>QUI</div>
+                            <div style="font-size: 0.9rem; color: var(--text-main);">15:00</div>
+                        </div>
+                        <div class="agenda-content">
+                            <h5>Operação e Laudos de Retinógrafos Portáteis</h5>
+                            <p>Dr. Alexandre Coquinho • Protocolo SAES 2.326</p>
+                        </div>
+                    </div>
+
+                    <div class="agenda-item">
+                        <div class="agenda-time">
+                            <div>SEX</div>
+                            <div style="font-size: 0.9rem; color: var(--text-main);">10:30</div>
+                        </div>
+                        <div class="agenda-content">
+                            <h5>Interpretação Ágil de Tele-ECG e Arritmias na APS</h5>
+                            <p>Núcleo de Cardiologia UFMG / Telessaúde MT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card de Suporte e Teleconsultoria Integrada -->
+                <div class="teleconsult-quick-card">
+                    <div class="teleconsult-info">
+                        <h5>Segunda Opinião Formativa</h5>
+                        <p>2 dúvidas clínicas pendentes de resposta</p>
+                    </div>
+                    <a href="#teleconsultoria" class="btn-teleconsult-action">Ver Casos</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function simularEntrada() {
+            const btn = document.getElementById('btn-entrar-sala');
+            btn.innerHTML = '<span>Conectando à Sala Virtual 04...</span>';
+            btn.style.background = '#00843d';
+            setTimeout(() => {
+                alert('Conexão autorizada! Microfone e câmera testados com sucesso no servidor da Tele Educação SES-MT.');
+                btn.innerHTML = '<span class="btn-icon-pulse">✓</span><span>Entrando na Sessão...</span>';
+            }, 800);
+        }
+    </script>
+</body>
+</html>

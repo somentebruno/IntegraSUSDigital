@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "round": "01",
+  "nativeViewport": "1280x900",
+  "candidates": [
+    {
+      "id": "variant-a",
+      "source": "variant-a.html",
+      "name": "Governo Digital Premium",
+      "concept": "Hero com profundidade azul SES-MT, métricas em vidro fosco no topo, catálogo limpo com navegação em abas e botão tátil memorável.",
+      "typography": "-apple-system, Segoe UI, Roboto, sans-serif",
+      "palette": ["#003366", "#0284C7", "#059669", "#F8FAFC", "#0F172A"],
+      "traits": [
+        "Hero institucional imponente com malha sutil e vidro fosco",
+        "Abas de serviços por eixo (Ambulatorial, Estadual, Nacional)",
+        "Botão de acesso ao Telessaúde com efeito de iluminação perimetral",
+        "Alta legibilidade e conformidade total com o SUS e Gov.br"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "variant-b",
+      "source": "variant-b.html",
+      "name": "Hub Silencioso & Minimalista",
+      "concept": "Interface silenciosa (Quiet UI) com fundo claro, tipografia de alto contraste, painel operacional em tempo real e fita de métricas contínua.",
+      "typography": "-apple-system, Segoe UI, Roboto, sans-serif",
+      "palette": ["#004B87", "#059669", "#FBFDFE", "#E6EDF5", "#0B132B"],
+      "traits": [
+        "Design silencioso com amplo respiro (white space) e sem caixas pesadas",
+        "Primeira dobra com painel de status e filas de telessaúde em tempo real",
+        "Catálogo editorial organizado em 3 eixos fundamentais de cuidado",
+        "Botão com feedback tátil de pulso e microinterações táteis"
+      ],
+      "interactive": true
+    },
+    {
+      "id": "variant-c",
+      "source": "variant-c.html",
+      "name": "Portal de Operações e Impacto",
+      "concept": "Command center orientado à ação com 4 portas de entrada rápida na primeira dobra, barômetro de eficiência e filtro por perfil profissional.",
+      "typography": "-apple-system, Segoe UI, Roboto, sans-serif",
+      "palette": ["#06152B", "#0B2545", "#0284C7", "#059669", "#F4F6F9"],
+      "traits": [
+        "4 portas de entrada rápida (Telediagnóstico, Consultas, Dúvidas, Aulas)",
+        "Barômetro de eficiência e resolutividade da APS em tempo real",
+        "Filtro dinâmico no catálogo para Médicos, Dentistas, Enfermagem e ERS",
+        "Botão memorável com iluminação holográfica de autenticação Gov.br"
+      ],
+      "interactive": true
+    }
+  ]
+}

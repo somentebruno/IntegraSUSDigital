@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Momento Memorável: Botão da Variação 1 (Brilho Perimetral & Feedback Tátil) */
+@layer components {
+    .btn-memoravel {
+        position: relative;
+        background: linear-gradient(135deg, #00843D 0%, #00A84E 100%);
+        color: #ffffff;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 9999px;
+        box-shadow: 0 4px 16px rgba(0, 132, 61, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.25) inset;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow: hidden;
+    }
+
+    .btn-memoravel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+        transition: 0.5s ease;
+    }
+
+    .btn-memoravel:hover::before {
+        left: 100%;
+    }
+
+    .btn-memoravel:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 132, 61, 0.45), 0 0 0 2px rgba(255, 255, 255, 0.45) inset;
+        background: linear-gradient(135deg, #007335 0%, #009646 100%);
+    }
+
+    .btn-memoravel:active {
+        transform: translateY(1px) scale(0.98);
+        box-shadow: 0 2px 8px rgba(0, 132, 61, 0.3);
+    }
+
+    /* Variante do Botão Memorável quando em Manutenção / Offline */
+    .btn-memoravel-offline {
+        position: relative;
+        background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+        color: #F1F5F9;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 9999px;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow: hidden;
+    }
+
+    .btn-memoravel-offline:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(225, 29, 72, 0.25), 0 0 0 1px rgba(244, 63, 94, 0.4) inset;
+        background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    }
+
+    .pulse-dot-green {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #34D399;
+        box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.35);
+        animation: pulseRing 2.4s infinite;
+    }
+
+    .pulse-dot-red {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #FB7185;
+        box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.35);
+        animation: pulseRingRed 2.4s infinite;
+    }
+
+    @keyframes pulseRing {
+        0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+        70% { box-shadow: 0 0 0 6px rgba(52, 211, 153, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    }
+
+    @keyframes pulseRingRed {
+        0% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0.8); }
+        70% { box-shadow: 0 0 0 6px rgba(244, 63, 94, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(244, 63, 94, 0); }
+    }
+}

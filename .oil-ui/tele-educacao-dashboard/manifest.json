@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "round": "01",
+  "nativeViewport": "1280x900",
+  "candidates": [
+    {
+      "source": "variant-a.html",
+      "name": "Variação A • Split Clínico (Foco Imediato)",
+      "concept": "Prioridade máxima à sessão ao vivo iminente com divisão assimétrica e botão com efeito tátil 3D e shimmer.",
+      "typography": "System UI / Alto Contraste",
+      "palette": ["#004B8D", "#00843D", "#FFFFFF", "#F8FAFC", "#0F172A"],
+      "traits": [
+        "Interface silenciosa",
+        "Card hero assimétrico",
+        "Contagem regressiva em destaque",
+        "Feedback tátil com micro-pressão"
+      ],
+      "interactive": true
+    },
+    {
+      "source": "variant-b.html",
+      "name": "Variação B • Matriz Modular (Bento Acadêmico)",
+      "concept": "Grade bento silenciosa e altamente organizada, métricas em linha e botão com indicador pulsante de ondas sonoras.",
+      "typography": "Inter / Hierarquia Corporativa Limpa",
+      "palette": ["#004B8D", "#002D55", "#00843D", "#FCFDFD", "#090D16"],
+      "traits": [
+        "Grade bento modular",
+        "Equilíbrio simétrico",
+        "Micro-equalizador dinâmico no botão",
+        "Check-in automático Gov.br"
+      ],
+      "interactive": true
+    },
+    {
+      "source": "variant-c.html",
+      "name": "Variação C • Linha Temporal (Chrono-First)",
+      "concept": "Organização cronológica por turnos do profissional com barra de métricas horizontal e checklist de periféricos no botão.",
+      "typography": "Segoe UI / Roboto Linear",
+      "palette": ["#004B8D", "#00843D", "#F8FAFC", "#FFFFFF", "#0F172A"],
+      "traits": [
+        "Visualização sequencial por turnos",
+        "Fita de métricas horizontal",
+        "Botão com verificação prévia de câmera e áudio"
+      ],
+      "interactive": true
+    }
+  ]
+}

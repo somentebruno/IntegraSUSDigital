@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 15">
+  <!-- Fundo azul (bandeira de MT) -->
+  <rect width="22" height="15" fill="#003087"/>
+  <!-- Losango branco centralizado -->
+  <polygon points="11,1.5 19.5,7.5 11,13.5 2.5,7.5" fill="#FFFFFF"/>
+  <!-- Círculo verde centralizado -->
+  <circle cx="11" cy="7.5" r="3.6" fill="#009C3B"/>
+  <!-- Estrela amarela de 5 pontas centralizada -->
+  <polygon points="11,4.5 11.95,7.1 14.7,7.1 12.55,8.7 13.3,11.3 11,9.8 8.7,11.3 9.45,8.7 7.3,7.1 10.05,7.1" fill="#FFDF00"/>
+</svg>

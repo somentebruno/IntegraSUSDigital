@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variação C • Linha Temporal (Chrono-First por Turnos)</title>
+    <style>
+        :root {
+            --bg-page: #f8fafc;
+            --surface: #ffffff;
+            --border-hairline: #e2e8f0;
+            --border-focus: #004b8d;
+            --text-title: #0f172a;
+            --text-copy: #334155;
+            --text-dim: #64748b;
+            --mt-blue: #004b8d;
+            --mt-blue-dark: #022e54;
+            --mt-green: #00843d;
+            --mt-green-light: #f0fdf4;
+            --live-coral: #ef4444;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-page);
+            color: var(--text-copy);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Header Limpo */
+        .header-strip {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border-hairline);
+            padding: 1rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--mt-blue);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .header-title small {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            background: #f1f5f9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .user-id {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.82rem;
+            color: var(--text-title);
+            font-weight: 600;
+        }
+        .user-pill {
+            background: #e2e8f0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--mt-blue);
+        }
+
+        /* Container Central */
+        .chrono-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+        }
+
+        /* Fila de Métricas Horizontais Minimalistas */
+        .metrics-strip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--surface);
+            border: 1px solid var(--border-hairline);
+            border-radius: 14px;
+            padding: 1rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .metric-item {
+            display: flex;
+            align-items: baseline;
+            gap: 0.75rem;
+        }
+        .metric-title {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--text-dim);
+        }
+        .metric-number {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-title);
+            letter-spacing: -0.5px;
+        }
+        .metric-divider {
+            width: 1px;
+            height: 32px;
+            background: var(--border-hairline);
+        }
+
+        /* Seção da Linha do Tempo (Chrono View) */
+        .timeline-section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+        .timeline-section-title h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.4px;
+            color: var(--text-title);
+        }
+        .current-day-label {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--mt-blue);
+            background: #e0f2fe;
+            padding: 0.3rem 0.8rem;
+            border-radius: 99px;
+        }
+
+        /* Timeline Card Principal de Hoje */
+        .timeline-day-card {
+            background: var(--surface);
+            border: 1px solid var(--border-hairline);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+            margin-bottom: 2rem;
+        }
+
+        /* Turno Ativo (Tarde - Em Destaque Iminente) */
+        .slot-active {
+            padding: 2.25rem;
+            background: #ffffff;
+            border-left: 6px solid var(--mt-blue);
+            display: grid;
+            grid-template-columns: 160px 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .slot-time {
+            display: flex;
+            flex-direction: column;
+        }
+        .slot-time-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--live-coral);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .slot-time-clock {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--text-title);
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+        .slot-countdown {
+            font-size: 0.75rem;
+            color: var(--mt-blue);
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .slot-details h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-title);
+            margin-bottom: 0.4rem;
+        }
+        .slot-details p {
+            font-size: 0.86rem;
+            color: var(--text-dim);
+            margin-bottom: 0.85rem;
+        }
+
+        .slot-tags {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .slot-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            background: #f1f5f9;
+            color: var(--text-copy);
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+        }
+
+        /* MOMENTO MEMORÁVEL VARIANT C: Botão Expansivo com Micro-Checklist */
+        .btn-chrono-join {
+            position: relative;
+            background: #004b8d;
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            padding: 1.15rem 1.85rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0, 75, 141, 0.2);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            min-width: 220px;
+        }
+        .btn-chrono-join-top {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .btn-chrono-sub {
+            font-size: 0.68rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 0.2rem;
+        }
+
+        .btn-chrono-join:hover {
+            background: #003666;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 75, 141, 0.35);
+        }
+
+        .btn-chrono-join:active {
+            transform: translateY(1px) scale(0.98);
+        }
+
+        /* Slots Seguintes (Próximos Turnos Silenciosos) */
+        .slot-upcoming {
+            padding: 1.35rem 2.25rem;
+            border-top: 1px solid var(--border-hairline);
+            display: grid;
+            grid-template-columns: 160px 1fr auto;
+            gap: 2rem;
+            align-items: center;
+            background: #fafbfd;
+            opacity: 0.9;
+            transition: background 0.2s;
+        }
+        .slot-upcoming:hover {
+            background: #ffffff;
+            opacity: 1;
+        }
+
+        .slot-upcoming-time {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-dim);
+        }
+        .slot-upcoming-date {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        .slot-upcoming-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-title);
+        }
+        .slot-upcoming-speaker {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+        }
+
+        .btn-reminder {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--mt-blue);
+            background: transparent;
+            border: 1px solid var(--border-hairline);
+            padding: 0.5rem 0.9rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-reminder:hover {
+            border-color: var(--mt-blue);
+            background: var(--mt-green-light);
+            color: var(--mt-green);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-strip">
+        <div class="header-title">
+            <span>Tele Educação MT</span>
+            <small>Plataforma SES-MT</small>
+        </div>
+        <div class="user-id">
+            <span>Dr. Lucas Mendes (Clínica Geral)</span>
+            <div class="user-pill">LM</div>
+        </div>
+    </header>
+
+    <main class="chrono-container">
+        <!-- Barra Horizontal Silenciosa de Indicadores Rápidos -->
+        <section class="metrics-strip">
+            <div class="metric-item">
+                <span class="metric-title">Horas Válidas</span>
+                <span class="metric-number">48h <span style="font-size: 0.8rem; font-weight: 500; color: var(--text-dim);">/ 60h</span></span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+                <span class="metric-title">Frequência Total</span>
+                <span class="metric-number" style="color: var(--mt-green);">92%</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+                <span class="metric-title">Certificados</span>
+                <span class="metric-number">4</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+                <span class="metric-title">Próxima Teleconsultoria</span>
+                <span class="metric-number" style="font-size: 1.15rem;">16:30 (Hoje)</span>
+            </div>
+        </section>
+
+        <!-- Seção Cronológica -->
+        <div class="timeline-section-title">
+            <h2>Linha do Tempo de Atividades Educacionais</h2>
+            <span class="current-day-label">Hoje • Terça-feira, 10 de Novembro</span>
+        </div>
+
+        <div class="timeline-day-card">
+            <!-- 1. Slot Ativo / Iminente (Destaque Maior) -->
+            <div class="slot-active">
+                <div class="slot-time">
+                    <span class="slot-time-badge">● Transmissão</span>
+                    <span class="slot-time-clock">14:30</span>
+                    <span class="slot-countdown">Em 22 minutos</span>
+                </div>
+
+                <div class="slot-details">
+                    <h3>Protocolo de Teledermatologia e Triagem de Lesões Cutâneas no SUS-MT</h3>
+                    <p>Dra. Camila Fontes • Médica Dermatologista (Hospital de Câncer / Telessaúde MT)</p>
+                    <div class="slot-tags">
+                        <span class="slot-tag">Sala Virtual 04</span>
+                        <span class="slot-tag">Módulo Obrigatório APS</span>
+                        <span class="slot-tag">2h Certificadas</span>
+                    </div>
+                </div>
+
+                <!-- Momento Memorável Variant C -->
+                <button class="btn-chrono-join" id="btn-entrar-chrono" onclick="entrarChrono()">
+                    <div class="btn-chrono-join-top">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        <span>Acessar Sala Virtual</span>
+                    </div>
+                    <span class="btn-chrono-sub">Câmera e Áudio Pré-Testados</span>
+                </button>
+            </div>
+
+            <!-- 2. Slot Seguinte (Amanhã) -->
+            <div class="slot-upcoming">
+                <div>
+                    <div class="slot-upcoming-date">Amanhã</div>
+                    <div class="slot-upcoming-time">09:00</div>
+                </div>
+                <div>
+                    <div class="slot-upcoming-title">Teleestomatologia & Prevenção do Câncer Bucal</div>
+                    <div class="slot-upcoming-speaker">Dra. Diurianne França (UFPB / SES-MT) • 1.5 horas</div>
+                </div>
+                <button class="btn-reminder" onclick="alert('Lembrete adicionado à sua agenda!')">Agendar Alerta</button>
+            </div>
+
+            <!-- 3. Slot Seguinte (Quinta-feira) -->
+            <div class="slot-upcoming">
+                <div>
+                    <div class="slot-upcoming-date">Quinta-feira</div>
+                    <div class="slot-upcoming-time">15:00</div>
+                </div>
+                <div>
+                    <div class="slot-upcoming-title">Laudos de Fundo de Olho e Retinografia Portátil</div>
+                    <div class="slot-upcoming-speaker">Dr. Alexandre Coquinho • Polo Retinopatia SES-MT</div>
+                </div>
+                <button class="btn-reminder" onclick="alert('Lembrete adicionado à sua agenda!')">Agendar Alerta</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function entrarChrono() {
+            const btn = document.getElementById('btn-entrar-chrono');
+            btn.innerHTML = '<span>Verificando Sala Virtual 04...</span>';
+            btn.style.background = '#00843d';
+            setTimeout(() => {
+                alert('Tudo pronto! Você está conectado à Sala Virtual 04. Bom aprendizado!');
+                btn.innerHTML = '<span>Conectado com Sucesso ✓</span>';
+            }, 750);
+        }
+    </script>
+</body>
+</html>

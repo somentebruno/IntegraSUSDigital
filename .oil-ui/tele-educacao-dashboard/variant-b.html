@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variação B • Matriz Modular (Bento Silencioso Acadêmico)</title>
+    <style>
+        :root {
+            --bg-canvas: #fcfdfd;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+            --border-subtle: #edf2f7;
+            --text-heading: #090d16;
+            --text-body: #475569;
+            --text-muted: #94a3b8;
+            --gov-blue: #004b8d;
+            --gov-blue-dark: #002d55;
+            --gov-blue-soft: #f0f7ff;
+            --gov-green: #00843d;
+            --live-indicator: #dc2626;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-canvas);
+            color: var(--text-body);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Top Navigation Discreta */
+        .navbar {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            padding: 0.85rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .gov-mark {
+            font-weight: 900;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            color: var(--gov-blue);
+            background: var(--gov-blue-soft);
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            border: 1px solid rgba(0, 75, 141, 0.15);
+        }
+        .nav-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-heading);
+        }
+
+        .user-capsule {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.82rem;
+            background: var(--bg-canvas);
+            padding: 0.35rem 0.85rem;
+            border-radius: 99px;
+            border: 1px solid var(--border);
+        }
+        .user-dot {
+            width: 7px;
+            height: 7px;
+            background: var(--gov-green);
+            border-radius: 50%;
+        }
+
+        /* Layout Bento Grid */
+        .main-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2.25rem;
+        }
+
+        .bento-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 1.75rem;
+        }
+        .bento-header h2 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.5px;
+        }
+        .bento-header p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        /* Bento Grid 3 Colunas com Proporção Silenciosa */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
+        }
+
+        .bento-tile {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.75rem;
+            position: relative;
+            transition: box-shadow 0.25s, border-color 0.25s;
+        }
+        .bento-tile:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+            border-color: #cbd5e1;
+        }
+
+        /* Tile 1: Sessão Ativa / Principal (Card Destaque) */
+        .tile-live {
+            grid-column: 1 / 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
+            border: 1px solid rgba(0, 75, 141, 0.2);
+        }
+
+        .tile-meta-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.25rem;
+        }
+        .live-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: var(--live-indicator);
+            background: #fff1f2;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+        }
+        .live-tag-circle {
+            width: 8px;
+            height: 8px;
+            background: var(--live-indicator);
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5);
+            animation: ring-pulse 1.8s infinite;
+        }
+        @keyframes ring-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.5); }
+            70% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+
+        .class-code {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            background: var(--bg-canvas);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+        }
+
+        .class-title {
+            font-size: 1.45rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--text-heading);
+            margin-bottom: 0.85rem;
+            letter-spacing: -0.4px;
+        }
+
+        .class-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding: 1.15rem 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 1.75rem;
+        }
+        .class-detail-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .detail-kicker {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+        .detail-val {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin-top: 0.2rem;
+        }
+
+        /* MOMENTO MEMORÁVEL VARIANT B: Botão Holográfico / Anel Sonoro Interativo */
+        .action-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .btn-bento-primary {
+            position: relative;
+            background: #004b8d;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            padding: 1.1rem 2.2rem;
+            font-size: 0.98rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.85rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 75, 141, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+            text-decoration: none;
+        }
+
+        .btn-bento-primary:hover {
+            background: #003768;
+            box-shadow: 0 8px 24px rgba(0, 75, 141, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .btn-bento-primary:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 6px rgba(0, 75, 141, 0.25);
+        }
+
+        /* Onda Sonora do Botão */
+        .sound-wave {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            height: 16px;
+        }
+        .sound-bar {
+            width: 3px;
+            height: 100%;
+            background: #ffffff;
+            border-radius: 2px;
+            animation: equalize 1.2s infinite ease-in-out;
+        }
+        .sound-bar:nth-child(2) { animation-delay: 0.2s; height: 60%; }
+        .sound-bar:nth-child(3) { animation-delay: 0.4s; height: 80%; }
+        @keyframes equalize {
+            0%, 100% { transform: scaleY(0.4); }
+            50% { transform: scaleY(1); }
+        }
+
+        .attendance-badge {
+            font-size: 0.8rem;
+            color: var(--gov-green);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Tile 2: Painel de Próximas Aulas (Coluna Direita) */
+        .tile-timeline {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+            display: flex;
+            flex-direction: column;
+        }
+        .timeline-header {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            padding-bottom: 0.85rem;
+            border-bottom: 1px solid var(--border-subtle);
+            margin-bottom: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .timeline-header span {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .timeline-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-grow: 1;
+        }
+        .timeline-item {
+            padding: 0.95rem 1.1rem;
+            border-radius: 10px;
+            background: var(--bg-canvas);
+            border: 1px solid var(--border-subtle);
+            transition: all 0.2s;
+        }
+        .timeline-item:hover {
+            border-color: var(--border);
+            background: #ffffff;
+        }
+        .item-time-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--gov-blue);
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+        .item-heading {
+            font-size: 0.86rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            line-height: 1.35;
+            margin-bottom: 0.25rem;
+        }
+        .item-sub {
+            font-size: 0.74rem;
+            color: var(--text-muted);
+        }
+
+        /* Tile 3: Métricas em Fila Inferior */
+        .tile-metrics {
+            grid-column: 1 / 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: #ffffff;
+        }
+        .metric-cell {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        .metric-cell:not(:last-child) {
+            border-right: 1px solid var(--border-subtle);
+            padding-right: 1.25rem;
+        }
+        .metric-cell-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+        }
+        .metric-cell-num {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.5px;
+        }
+        .metric-cell-foot {
+            font-size: 0.74rem;
+            color: var(--gov-green);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar Discreta -->
+    <header class="navbar">
+        <div class="nav-left">
+            <div class="gov-mark">SES-MT</div>
+            <div class="nav-title">Plataforma Tele Educação MT</div>
+        </div>
+        <div class="user-capsule">
+            <span class="user-dot"></span>
+            <span>Dr. Lucas Mendes • CRM-MT 9821</span>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <!-- Cabeçalho Silencioso -->
+        <div class="bento-header">
+            <div>
+                <h2>Painel da Estação de Aprendizado</h2>
+                <p>Ambiente integrado às diretrizes da Escola de Saúde Pública (ESP-MT)</p>
+            </div>
+            <div style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted);">
+                Sessão Síncrona Ativa na Rede
+            </div>
+        </div>
+
+        <!-- Grade Bento Silenciosa -->
+        <div class="bento-grid">
+            <!-- Bloco 1: Transmissão / Próxima Aula em Foco -->
+            <section class="bento-tile tile-live">
+                <div>
+                    <div class="tile-meta-bar">
+                        <span class="live-tag">
+                            <span class="live-tag-circle"></span>
+                            Inicia em Breve (14:30)
+                        </span>
+                        <span class="class-code">MÓDULO DE TELESSAÚDE #04</span>
+                    </div>
+
+                    <h3 class="class-title">
+                        Protocolo de Teledermatologia e Triagem de Lesões Cutâneas no SUS-MT
+                    </h3>
+
+                    <div class="class-details">
+                        <div class="class-detail-item">
+                            <span class="detail-kicker">Palestrante</span>
+                            <span class="detail-val">Dra. Camila Fontes</span>
+                        </div>
+                        <div class="class-detail-item">
+                            <span class="detail-kicker">Instituição</span>
+                            <span class="detail-val">Hospital de Câncer / SES</span>
+                        </div>
+                        <div class="class-detail-item">
+                            <span class="detail-kicker">Carga Horária</span>
+                            <span class="detail-val">2.0 horas certificadas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Momento Memorável Bento -->
+                <div class="action-row">
+                    <button class="btn-bento-primary" id="btn-entrar-bento" onclick="conectarBento()">
+                        <div class="sound-wave">
+                            <span class="sound-bar"></span>
+                            <span class="sound-bar"></span>
+                            <span class="sound-bar"></span>
+                        </div>
+                        <span>Acessar Sala Virtual Interativa</span>
+                    </button>
+
+                    <div class="attendance-badge">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <span>Check-in Automático via Gov.br</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bloco 2: Linha de Próximas Sessões -->
+            <aside class="bento-tile tile-timeline">
+                <div class="timeline-header">
+                    <h4>Cronograma das Próximas Aulas</h4>
+                    <span>Semana 46</span>
+                </div>
+
+                <div class="timeline-stack">
+                    <div class="timeline-item">
+                        <span class="item-time-tag">Amanhã • 09:00</span>
+                        <h5 class="item-heading">Teleestomatologia & Prevenção do Câncer Bucal</h5>
+                        <p class="item-sub">Dra. Diurianne França (UFPB / SES)</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="item-time-tag">Quinta-feira • 15:00</span>
+                        <h5 class="item-heading">Laudos de Fundo de Olho e Retinografia Não Midriática</h5>
+                        <p class="item-sub">Dr. Alexandre Coquinho • Polo Retinopatia</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="item-time-tag">Sexta-feira • 10:30</span>
+                        <h5 class="item-heading">Tele-ECG: Reconhecimento Rápido de Síndrome Coronariana</h5>
+                        <p class="item-sub">Coordenação Cardiologia UFMG</p>
+                    </div>
+
+                    <div class="timeline-item" style="opacity: 0.85;">
+                        <span class="item-time-tag">Segunda • 14:00</span>
+                        <h5 class="item-heading">Webconferência: Estratificação de Risco na Atenção Primária</h5>
+                        <p class="item-sub">Escola de Saúde Pública (ESP-MT)</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Bloco 3: Indicadores Acadêmicos em Fila -->
+            <section class="bento-tile tile-metrics">
+                <div class="metric-cell">
+                    <span class="metric-cell-label">Horas Totais Cumpridas</span>
+                    <span class="metric-cell-num">48h</span>
+                    <span class="metric-cell-foot">80% da meta semestral atingida</span>
+                </div>
+
+                <div class="metric-cell">
+                    <span class="metric-cell-label">Taxa de Frequência</span>
+                    <span class="metric-cell-num">92%</span>
+                    <span class="metric-cell-foot">Apto para emissão de certificado</span>
+                </div>
+
+                <div class="metric-cell">
+                    <span class="metric-cell-label">Teleconsultorias Práticas</span>
+                    <span class="metric-cell-num">14 casos</span>
+                    <span class="metric-cell-foot">Casos clínicos vinculados aos cursos</span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function conectarBento() {
+            const btn = document.getElementById('btn-entrar-bento');
+            btn.innerHTML = '<span>Verificando Credenciais do Profissional...</span>';
+            btn.style.background = '#00843d';
+            setTimeout(() => {
+                alert('Bem-vindo à Sala Virtual! Presença registrada no sistema da SES-MT.');
+                btn.innerHTML = '<span>Entrando na Sessão Ao Vivo...</span>';
+            }, 700);
+        }
+    </script>
+</body>
+</html>

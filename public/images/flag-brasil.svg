@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 15">
+  <!-- Fundo verde -->
+  <rect width="22" height="15" fill="#009C3B"/>
+  <!-- Losango amarelo -->
+  <polygon points="11,1.2 20.8,7.5 11,13.8 1.2,7.5" fill="#FFDF00"/>
+  <!-- Círculo azul -->
+  <circle cx="11" cy="7.5" r="3.8" fill="#002776"/>
+  <!-- Faixa branca horizontal centralizada -->
+  <rect x="7.2" y="7.1" width="7.6" height="0.9" fill="white" rx="0.4"/>
+  <!-- Estrelas brancas pequenas ao redor da faixa -->
+  <circle cx="9.0" cy="6.1" r="0.42" fill="white"/>
+  <circle cx="11.0" cy="5.5" r="0.42" fill="white"/>
+  <circle cx="13.0" cy="6.1" r="0.42" fill="white"/>
+  <circle cx="9.6" cy="9.3" r="0.35" fill="white"/>
+  <circle cx="12.4" cy="9.3" r="0.35" fill="white"/>
+  <circle cx="11.0" cy="9.9" r="0.35" fill="white"/>
+</svg>

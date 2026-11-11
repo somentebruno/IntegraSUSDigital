@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntegraSUS Digital MT - Hub Minimalista Silencioso (Variação B)</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --bg: #FBFDFE;
+      --surface: #FFFFFF;
+      --text-main: #0B132B;
+      --text-muted: #5C677D;
+      --text-subtle: #8D99AE;
+      --brand-blue: #004B87;
+      --brand-blue-hover: #003865;
+      --brand-blue-soft: #EBF4FC;
+      --accent-green: #059669;
+      --accent-green-soft: #ECFDF5;
+      --border-subtle: #E6EDF5;
+      --border-focus: #004B87;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Top Government Utility Bar */
+    .gov-strip {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.78rem;
+      padding: 0.4rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+    }
+    .gov-strip-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+      color: #1E293B;
+    }
+    .gov-flag {
+      width: 18px;
+      height: 12px;
+      border-radius: 2px;
+      background: linear-gradient(135deg, #004B87 50%, #059669 50%);
+    }
+    .gov-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .gov-links a:hover {
+      color: var(--brand-blue);
+    }
+
+    /* Main Header */
+    .main-nav {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.9rem 2rem;
+    }
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #004B87, #0284C7);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.5px;
+      box-shadow: 0 4px 12px rgba(0, 75, 135, 0.18);
+    }
+    .brand-titles h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--brand-blue);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .brand-titles span {
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-link {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #334155;
+      padding: 0.5rem 0.25rem;
+      position: relative;
+      transition: color 0.15s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--brand-blue);
+    }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--brand-blue);
+      border-radius: 2px;
+    }
+
+    /* Memorable Access Button (Quiet Tactile Edition) */
+    .btn-portal-touch {
+      position: relative;
+      background: #004B87;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 75, 135, 0.12), 0 8px 20px rgba(0, 75, 135, 0.18);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
+    }
+    .btn-portal-touch::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35), transparent 70%);
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+    .btn-portal-touch:hover {
+      background: #003B6B;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 75, 135, 0.16), 0 12px 28px rgba(0, 75, 135, 0.28);
+    }
+    .btn-portal-touch:active {
+      transform: translateY(1px) scale(0.98);
+      box-shadow: 0 1px 3px rgba(0, 75, 135, 0.3);
+    }
+    .touch-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.3);
+      animation: pulse-ring 2.4s infinite;
+    }
+    @keyframes pulse-ring {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* Container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* First Fold Hero - Focused & Quiet */
+    .hero-quiet {
+      padding: 3.5rem 0 2.5rem;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .hero-meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--brand-blue-soft);
+      color: var(--brand-blue);
+      border: 1px solid #D1E5F7;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.25rem;
+    }
+    .hero-meta-badge svg {
+      width: 14px;
+      height: 14px;
+    }
+    .hero-quiet h2 {
+      font-size: 2.85rem;
+      font-weight: 800;
+      line-height: 1.12;
+      color: #0F172A;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.2rem;
+    }
+    .hero-quiet h2 span.gradient-text {
+      background: linear-gradient(135deg, #004B87, #0284C7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-quiet p.lead {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 2rem;
+      max-width: 580px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2.25rem;
+    }
+    .btn-secondary-quiet {
+      background: #FFFFFF;
+      color: #334155;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-secondary-quiet:hover {
+      background: #F8FAFC;
+      border-color: #CBD5E1;
+      color: var(--brand-blue);
+    }
+    .hero-normative-note {
+      font-size: 0.78rem;
+      color: var(--text-subtle);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .hero-normative-note span.pill {
+      background: #F1F5F9;
+      color: #475569;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Right Operative Card: Telehealth Status & Quick Routes */
+    .operative-panel {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
+      position: relative;
+    }
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid #F1F5F9;
+      margin-bottom: 1.25rem;
+    }
+    .panel-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .panel-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent-green);
+      background: var(--accent-green-soft);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-full);
+    }
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-green);
+    }
+
+    .tele-stream-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .stream-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.9rem;
+      background: #F8FAFC;
+      border: 1px solid #F1F5F9;
+      border-radius: var(--radius-md);
+      transition: all 0.2s ease;
+    }
+    .stream-row:hover {
+      background: #FFFFFF;
+      border-color: #CBD5E1;
+      transform: translateX(3px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    .stream-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .stream-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+    }
+    .stream-icon.blue { background: #EBF4FC; color: #004B87; }
+    .stream-icon.green { background: #ECFDF5; color: #059669; }
+    .stream-icon.amber { background: #FFFBEB; color: #D97706; }
+    .stream-name {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #1E293B;
+    }
+    .stream-desc {
+      font-size: 0.73rem;
+      color: #64748B;
+    }
+    .stream-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      color: #334155;
+    }
+
+    .direct-access-box {
+      background: linear-gradient(135deg, #004B87, #0F325E);
+      border-radius: var(--radius-md);
+      padding: 1.1rem 1.25rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .direct-text h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+    }
+    .direct-text p {
+      font-size: 0.73rem;
+      opacity: 0.85;
+    }
+    .btn-enter-room {
+      background: #FFFFFF;
+      color: #004B87;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+      transition: transform 0.2s ease;
+    }
+    .btn-enter-room:hover {
+      transform: scale(1.04);
+      background: #F0FDF4;
+      color: #15803D;
+    }
+
+    /* Silent Stat Strip */
+    .stat-strip-silent {
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      background: #FFFFFF;
+      padding: 2.25rem 0;
+      margin: 1.5rem 0 3.5rem;
+    }
+    .stat-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .stat-col {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .stat-col:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: #F1F5F9;
+    }
+    .stat-col .num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+    .stat-col .num span.plus {
+      color: #004B87;
+      font-weight: 700;
+    }
+    .stat-col .label {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 0.2rem;
+    }
+    .stat-col .detail {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Section Headers */
+    .section-quiet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 2rem;
+    }
+    .section-title-wrap .sub {
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #004B87;
+      margin-bottom: 0.35rem;
+      display: block;
+    }
+    .section-title-wrap h3 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.02em;
+    }
+    .section-title-wrap p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-top: 0.35rem;
+    }
+    .link-all {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #004B87;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s ease;
+    }
+    .link-all:hover {
+      gap: 0.7rem;
+    }
+
+    /* Quiet Service Architecture (No Heavy Box Clutter) */
+    .service-axes-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .axis-column {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .axis-column:hover {
+      border-color: #CBD5E1;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+    }
+    .axis-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px solid #F1F5F9;
+      margin-bottom: 1.25rem;
+    }
+    .axis-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--brand-blue-soft);
+      color: var(--brand-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .axis-title h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0F172A;
+    }
+    .axis-title span {
+      font-size: 0.73rem;
+      color: #64748B;
+      font-weight: 500;
+    }
+
+    .service-item-row {
+      padding: 0.85rem 0.5rem;
+      border-radius: var(--radius-sm);
+      transition: background 0.15s ease;
+      cursor: pointer;
+    }
+    .service-item-row:hover {
+      background: #F8FAFC;
+    }
+    .service-item-row:not(:last-child) {
+      border-bottom: 1px solid #F8FAFC;
+    }
+    .service-name-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.2rem;
+    }
+    .service-name-row strong {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1E293B;
+    }
+    .service-badge-pill {
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: #F1F5F9;
+      color: #475569;
+    }
+    .service-desc-row {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* 16 ERS Regional Health Offices Section */
+    .ers-quiet-section {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      margin-bottom: 4rem;
+    }
+    .ers-grid-capsules {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.9rem;
+      margin-top: 1.5rem;
+    }
+    .ers-capsule {
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-md);
+      background: #F8FAFC;
+      border: 1px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+    .ers-capsule:hover {
+      background: #FFFFFF;
+      border-color: #004B87;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 75, 135, 0.08);
+    }
+    .ers-capsule-name {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #1E293B;
+    }
+    .ers-capsule-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: #64748B;
+      background: #FFFFFF;
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      border: 1px solid #E2E8F0;
+    }
+
+    /* News & Gallery Minimal */
+    .news-gallery-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 4.5rem;
+    }
+    .news-column-quiet {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .news-card-quiet {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 1.25rem;
+      padding: 1rem;
+      border-radius: var(--radius-md);
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .news-card-quiet:hover {
+      border-color: #CBD5E1;
+      transform: translateY(-2px);
+    }
+    .news-card-quiet img {
+      width: 100%;
+      height: 95px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      background: #E2E8F0;
+    }
+    .news-content-quiet .date {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #64748B;
+      margin-bottom: 0.25rem;
+    }
+    .news-content-quiet h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0F172A;
+      line-height: 1.35;
+      margin-bottom: 0.4rem;
+    }
+    .news-content-quiet p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .gallery-preview-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+    }
+    .gallery-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+    .gallery-mini-grid img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      background: #F1F5F9;
+      transition: opacity 0.2s ease;
+    }
+    .gallery-mini-grid img:hover {
+      opacity: 0.85;
+    }
+
+    /* Institutional Footer */
+    .footer-quiet {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-subtle);
+      padding: 3.5rem 0 2rem;
+      font-size: 0.85rem;
+      color: #64748B;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-col h5 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 1rem;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .footer-col ul a:hover {
+      color: #004B87;
+    }
+    .footer-bottom {
+      border-top: 1px solid #F1F5F9;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.76rem;
+      color: #94A3B8;
+    }
+
+    /* Modal / Interaction Mock for Memorable Moment */
+    .toast-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0F172A;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      display: none;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 1000;
+      animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .service-axes-layout { grid-template-columns: 1fr; }
+      .ers-grid-capsules { grid-template-columns: repeat(2, 1fr); }
+      .news-gallery-grid { grid-template-columns: 1fr; }
+      .stat-strip-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+      .stat-col:not(:last-child)::after { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .stat-strip-grid { grid-template-columns: 1fr; }
+      .ers-grid-capsules { grid-template-columns: 1fr; }
+      .nav-menu { display: none; }
+      .hero-quiet h2 { font-size: 2.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Institutional Bar -->
+  <header class="gov-strip">
+    <div class="gov-strip-brand">
+      <div class="gov-flag"></div>
+      <span>Governo do Estado de Mato Grosso &bull; Secretaria de Estado de Saúde (SES-MT)</span>
+    </div>
+    <div class="gov-links">
+      <a href="#portal-ses">Portal SES-MT</a>
+      <a href="#">Transparência MT</a>
+      <a href="#">Acessibilidade</a>
+    </div>
+  </header>
+
+  <!-- Main Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="brand-group">
+        <div class="logo-badge">MT</div>
+        <div class="brand-titles">
+          <h1>IntegraSUS Digital</h1>
+          <span>Saúde Digital Mato Grosso</span>
+        </div>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="#" class="nav-link active">Início</a></li>
+        <li><a href="#" class="nav-link">Quem Somos</a></li>
+        <li><a href="#" class="nav-link">Serviços Oficiais</a></li>
+        <li><a href="#" class="nav-link">16 Escritórios Regionais</a></li>
+        <li><a href="#" class="nav-link">Notícias</a></li>
+        <li><a href="#" class="nav-link">Contato</a></li>
+      </ul>
+
+      <!-- Memorable Tactile Access Button -->
+      <button class="btn-portal-touch" id="btnAcessoRapido" onclick="showTactileFeedback()">
+        <span class="touch-indicator"></span>
+        <span>Acessar Telessaúde MT</span>
+        <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- First Fold Hero: Quiet, Direct & Functional -->
+  <main class="hero-quiet">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Quiet Institutional Value -->
+        <div>
+          <div class="hero-meta-badge">
+            <svg fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Núcleo Estadual de Telessaúde e Saúde Digital &bull; SES-MT</span>
+          </div>
+
+          <h2>
+            Conectando a Saúde de Mato Grosso <span class="gradient-text">sem Barreiras</span>.
+          </h2>
+
+          <p class="lead">
+            A infraestrutura digital oficial que aproxima médicos especialistas, laudos diagnósticos em alta resolução e teleconsultorias aos 141 municípios e 16 Escritórios Regionais de Saúde.
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn-portal-touch" onclick="showTactileFeedback()">
+              <span class="touch-indicator"></span>
+              <span>Acessar Sistema de Telessaúde</span>
+              <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+
+            <a href="#catalogo-servicos" class="btn-secondary-quiet">
+              <span>Explorar Serviços e Laudos</span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-normative-note">
+            <span class="pill">PNISD</span> Portaria GM/MS nº 12.301/2026 &bull; <span class="pill">SES-MT</span> Decreto Estadual nº 667/2024
+          </div>
+        </div>
+
+        <!-- Right: Real-time Telehealth Status & Active Queues -->
+        <div>
+          <div class="operative-panel">
+            <div class="panel-head">
+              <div class="panel-title">
+                <svg width="18" height="18" fill="none" stroke="var(--brand-blue)" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+                <span>Fila e Disponibilidade em Tempo Real</span>
+              </div>
+              <div class="panel-status">
+                <div class="status-dot"></div>
+                <span>Sistemas Estaduais Online</span>
+              </div>
+            </div>
+
+            <div class="tele-stream-list">
+              <div class="stream-row">
+                <div class="stream-info">
+                  <div class="stream-icon blue">&#128065;</div>
+                  <div>
+                    <div class="stream-name">Teleretinografia Diabética</div>
+                    <div class="stream-desc">70 retinógrafos portáteis ativos nos ERS</div>
+                  </div>
+                </div>
+                <div class="stream-badge">Laudo em 48h</div>
+              </div>
+
+              <div class="stream-row">
+                <div class="stream-info">
+                  <div class="stream-icon green">&#9829;</div>
+                  <div>
+                    <div class="stream-name">Tele-ECG &amp; Telediagnóstico</div>
+                    <div class="stream-desc">Hospital Albert Einstein / SES-MT</div>
+                  </div>
+                </div>
+                <div class="stream-badge">Tempo médio: 7 min</div>
+              </div>
+
+              <div class="stream-row">
+                <div class="stream-info">
+                  <div class="stream-icon amber">&#129309;</div>
+                  <div>
+                    <div class="stream-name">Teleinterconsulta Ambulatorial</div>
+                    <div class="stream-desc">50 especialidades médicas ativas</div>
+                  </div>
+                </div>
+                <div class="stream-badge">Disponível p/ Regulação</div>
+              </div>
+            </div>
+
+            <!-- Direct Entry Box -->
+            <div class="direct-access-box">
+              <div class="direct-text">
+                <h4>Médico ou Enfermeiro do SUS-MT?</h4>
+                <p>Acesso rápido com certificado digital ou Gov.br</p>
+              </div>
+              <button class="btn-enter-room" onclick="showTactileFeedback()">Entrar na Plataforma &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Quiet Impact Stat Strip (Zero Clutter, High Contrast Numbers) -->
+  <section class="stat-strip-silent">
+    <div class="container">
+      <div class="stat-strip-grid">
+        <div class="stat-col">
+          <div class="num">141<span class="plus">/141</span></div>
+          <div class="label">Municípios Conectados</div>
+          <div class="detail">100% dos municípios de MT com cobertura oficial pelo núcleo.</div>
+        </div>
+
+        <div class="stat-col">
+          <div class="num">+185<span class="plus"> mil</span></div>
+          <div class="label">Laudos Especializados</div>
+          <div class="detail">Exames com diagnóstico remoto para retinografia, ECG e imagem.</div>
+        </div>
+
+        <div class="stat-col">
+          <div class="num">93<span class="plus">%</span></div>
+          <div class="label">Resolutividade Local</div>
+          <div class="detail">Pacientes atendidos no município sem necessidade de deslocamento.</div>
+        </div>
+
+        <div class="stat-col">
+          <div class="num">16<span class="plus"> ERS</span></div>
+          <div class="label">Escritórios Regionais</div>
+          <div class="detail">Pontos focais técnicos integrando as Redes de Atenção à Saúde.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Architecture: Clean Editorial 3-Axis Layout -->
+  <section class="container" id="catalogo-servicos" style="margin-bottom: 4rem;">
+    <div class="section-quiet-header">
+      <div class="section-title-wrap">
+        <span class="sub">Estrutura de Cuidados</span>
+        <h3>Catálogo Oficial de Telessaúde e Telediagnóstico</h3>
+        <p>Serviços regulados e homologados pela SES-MT para o fortalecimento da Atenção Primária e Especializada.</p>
+      </div>
+      <a href="#" class="link-all">
+        <span>Ver documentação técnica</span>
+        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="service-axes-layout">
+      
+      <!-- Axis 1: Telediagnóstico Estadual -->
+      <div class="axis-column">
+        <div class="axis-head">
+          <div class="axis-icon">&#128302;</div>
+          <div class="axis-title">
+            <h4>Telediagnóstico Estadual</h4>
+            <span>Exames e emissão remota de laudos</span>
+          </div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Teleretinografia MT</strong>
+            <span class="service-badge-pill">70 Câmeras</span>
+          </div>
+          <div class="service-desc-row">Rastreio de retinopatia diabética e lesões oculares com laudo oftalmológico.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Tele-Espirometria</strong>
+            <span class="service-badge-pill">Estadual</span>
+          </div>
+          <div class="service-desc-row">Diagnóstico precoce de DPOC, asma e patologias respiratórias crônicas.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Teleestomatologia</strong>
+            <span class="service-badge-pill">Saúde Bucal</span>
+          </div>
+          <div class="service-desc-row">Avaliação remota de lesões de cavidade bucal para prevenção de câncer oral.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Telepatologia e Raio-X</strong>
+            <span class="service-badge-pill">Digital</span>
+          </div>
+          <div class="service-desc-row">Integração de imagens radiológicas diretamente ao prontuário eletrônico.</div>
+        </div>
+      </div>
+
+      <!-- Axis 2: Cuidado Compartilhado & Consultoria -->
+      <div class="axis-column">
+        <div class="axis-head">
+          <div class="axis-icon">&#128104;&#8205;&#9877;&#65039;</div>
+          <div class="axis-title">
+            <h4>Consultorias &amp; Especialistas</h4>
+            <span>Segunda opinião e teleinterconsulta</span>
+          </div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Teleinterconsulta Ambulatorial</strong>
+            <span class="service-badge-pill">50+ Áreas</span>
+          </div>
+          <div class="service-desc-row">Médico da APS e médico especialista em consulta conjunta com o paciente.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Segunda Opinião Formativa</strong>
+            <span class="service-badge-pill">Assíncrona</span>
+          </div>
+          <div class="service-desc-row">Tira-dúvidas clínico multiprofissional com especialistas do núcleo em até 72h.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Parcerias Nacionais (PROADI-SUS)</strong>
+            <span class="service-badge-pill">Einstein / HCor</span>
+          </div>
+          <div class="service-desc-row">Teledermatologia, telecardiologia e teleoftalmologia de excelência nacional.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Estratificação de Risco Remota</strong>
+            <span class="service-badge-pill">Regulação</span>
+          </div>
+          <div class="service-desc-row">Apoio aos reguladores dos 16 ERS para priorização de filas do SUS.</div>
+        </div>
+      </div>
+
+      <!-- Axis 3: Tele-Educação & Capacitação Técnica -->
+      <div class="axis-column">
+        <div class="axis-head">
+          <div class="axis-icon">&#127891;</div>
+          <div class="axis-title">
+            <h4>Tele-Educação &amp; Suporte ERS</h4>
+            <span>Capacitação permanente para o SUS</span>
+          </div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Plataforma Tele-Educação MT</strong>
+            <span class="service-badge-pill">1,5M Views</span>
+          </div>
+          <div class="service-desc-row">Webpalestras semanais e cursos certificados para servidores estaduais e municipais.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Capacitação em Retinografia</strong>
+            <span class="service-badge-pill">Presencial/Híbrido</span>
+          </div>
+          <div class="service-desc-row">Treinamento prático de enfermeiros e técnicos para operação dos equipamentos.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Suporte Técnico aos 16 ERS</strong>
+            <span class="service-badge-pill">Helpdesk</span>
+          </div>
+          <div class="service-desc-row">Acompanhamento contínuo de conectividade e dúvidas operacionais no interior.</div>
+        </div>
+
+        <div class="service-item-row">
+          <div class="service-name-row">
+            <strong>Biblioteca Virtual em Saúde MT</strong>
+            <span class="service-badge-pill">Acervo SUS</span>
+          </div>
+          <div class="service-desc-row">Guias clínicos, protocolos de encaminhamento e notas técnicas da SES-MT.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 16 Regional Health Offices Section -->
+  <section class="container">
+    <div class="ers-quiet-section">
+      <div class="section-title-wrap">
+        <span class="sub">Presença Territorial</span>
+        <h3>16 Escritórios Regionais de Saúde Integrados</h3>
+        <p>A descentralização das ações de telessaúde garantindo capilaridade até as comunidades mais distantes de Mato Grosso.</p>
+      </div>
+
+      <div class="ers-grid-capsules">
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Cuiabá</span>
+          <span class="ers-capsule-tag">Sede Central</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Várzea Grande</span>
+          <span class="ers-capsule-tag">Metropolitana</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Rondonópolis</span>
+          <span class="ers-capsule-tag">Região Sul</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Sinop</span>
+          <span class="ers-capsule-tag">Teles Pires</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Cáceres</span>
+          <span class="ers-capsule-tag">Sudoeste</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Barra do Garças</span>
+          <span class="ers-capsule-tag">Araguaia</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Tangará da Serra</span>
+          <span class="ers-capsule-tag">Médio Norte</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Alta Floresta</span>
+          <span class="ers-capsule-tag">Extremo Norte</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Juína</span>
+          <span class="ers-capsule-tag">Noroeste</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Diamantino</span>
+          <span class="ers-capsule-tag">Centro Norte</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Água Boa</span>
+          <span class="ers-capsule-tag">Médio Araguaia</span>
+        </div>
+        <div class="ers-capsule">
+          <span class="ers-capsule-name">ERS Pontes e Lacerda</span>
+          <span class="ers-capsule-tag">Vale do Guaporé</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Visual Documentation -->
+  <section class="container" style="margin-bottom: 4rem;">
+    <div class="news-gallery-grid">
+      
+      <!-- News -->
+      <div>
+        <div class="section-title-wrap" style="margin-bottom: 1.25rem;">
+          <span class="sub">Transparência &amp; Atos</span>
+          <h3>Notícias e Ações Recentes</h3>
+        </div>
+
+        <div class="news-column-quiet">
+          <article class="news-card-quiet">
+            <div style="background: linear-gradient(135deg, #004B87, #0284C7); border-radius: 8px; display:flex; align-items:center; justify-content:center; color:white; font-size:1.5rem;">
+              &#128065;
+            </div>
+            <div class="news-content-quiet">
+              <div class="date">08 de Novembro de 2026 &bull; Telediagnóstico</div>
+              <h4>SES-MT amplia entrega de retinógrafos portáteis para municípios do Vale do Araguaia</h4>
+              <p>Equipamentos de última geração aceleram o rastreamento do diabetes mellitus e evitam cegueira irreversível no interior.</p>
+            </div>
+          </article>
+
+          <article class="news-card-quiet">
+            <div style="background: linear-gradient(135deg, #059669, #10B981); border-radius: 8px; display:flex; align-items:center; justify-content:center; color:white; font-size:1.5rem;">
+              &#127891;
+            </div>
+            <div class="news-content-quiet">
+              <div class="date">02 de Novembro de 2026 &bull; Tele-Educação</div>
+              <h4>Ciclo de capacitações em Teleestomatologia reúne mais de 450 cirurgiões-dentistas do SUS</h4>
+              <p>Treinamento focado em diagnóstico precoce de câncer oral na Atenção Básica em parceria com os 16 ERS.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Gallery Preview -->
+      <div>
+        <div class="section-title-wrap" style="margin-bottom: 1.25rem;">
+          <span class="sub">Atuação em Campo</span>
+          <h3>Galeria Institucional</h3>
+        </div>
+
+        <div class="gallery-preview-box">
+          <p style="font-size: 0.8rem; color: #64748B;">Registros fotográficos das capacitações e atendimentos nos Escritórios Regionais.</p>
+          <div class="gallery-mini-grid">
+            <div style="height:85px; border-radius:6px; background: #E2E8F0; display:flex; align-items:center; justify-content:center; font-size:0.75rem; color:#64748B; font-weight:600;">Treinamento Retino</div>
+            <div style="height:85px; border-radius:6px; background: #CBD5E1; display:flex; align-items:center; justify-content:center; font-size:0.75rem; color:#64748B; font-weight:600;">Oficina ERS Sinop</div>
+            <div style="height:85px; border-radius:6px; background: #CBD5E1; display:flex; align-items:center; justify-content:center; font-size:0.75rem; color:#64748B; font-weight:600;">Teleinterconsulta</div>
+            <div style="height:85px; border-radius:6px; background: #E2E8F0; display:flex; align-items:center; justify-content:center; font-size:0.75rem; color:#64748B; font-weight:600;">Ver Todos (+48)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Institutional Footer -->
+  <footer class="footer-quiet">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.75rem;">
+            <div style="width:28px; height:28px; border-radius:6px; background:#004B87; color:white; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.8rem;">MT</div>
+            <strong style="color:#0F172A; font-size:1rem;">IntegraSUS Digital MT</strong>
+          </div>
+          <p style="font-size:0.78rem; line-height:1.6; margin-bottom:1rem;">
+            Núcleo de Telessaúde e Saúde Digital da Secretaria de Estado de Saúde de Mato Grosso (SES-MT).
+          </p>
+          <p style="font-size:0.74rem; color:#94A3B8;">
+            Centro Político Administrativo, Bloco 05<br>Cuiabá - MT &bull; CEP 78049-902
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navegação</h5>
+          <ul>
+            <li><a href="#">Quem Somos</a></li>
+            <li><a href="#">Estrutura Organizacional</a></li>
+            <li><a href="#">Catálogo de Serviços</a></li>
+            <li><a href="#">16 Escritórios Regionais</a></li>
+            <li><a href="#">Legislação &amp; Normativas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Sistemas &amp; Apoio</h5>
+          <ul>
+            <li><a href="#">Plataforma de Telessaúde</a></li>
+            <li><a href="#">Portal de Tele-Educação</a></li>
+            <li><a href="#">Central de Laudos Digitais</a></li>
+            <li><a href="#">Suporte ao Profissional</a></li>
+            <li><a href="#">Manual de Encaminhamentos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Contato Oficial</h5>
+          <p style="font-size:0.8rem; margin-bottom:0.5rem;">
+            <strong>E-mail:</strong><br>
+            <a href="#contato-email" style="color:#004B87;">saudedigitalmt@ses.mt.gov.br</a>
+          </p>
+          <p style="font-size:0.8rem; margin-bottom:0.75rem;">
+            <strong>Atendimento aos ERS:</strong><br>
+            Segunda a Sexta, das 08h às 18h
+          </p>
+          <button class="btn-secondary-quiet" style="font-size:0.75rem; padding:0.4rem 0.8rem;" onclick="showTactileFeedback()">
+            Falar com a Central de Regulação
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Governo do Estado de Mato Grosso &bull; Secretaria de Estado de Saúde. Todos os direitos reservados.</div>
+        <div>Alinhado à LGPD e à Portaria GM/MS nº 12.301/2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast for Tactile Moment Demo -->
+  <div class="toast-pill" id="toastPill">
+    <div style="width:8px; height:8px; border-radius:50%; background:#10B981;"></div>
+    <span>Conectando com segurança ao Sistema Integrado de Telessaúde MT...</span>
+  </div>
+
+  <script>
+    function showTactileFeedback() {
+      const toast = document.getElementById('toastPill');
+      toast.style.display = 'flex';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3500);
+    }
+  </script>
+</body>
+</html>
